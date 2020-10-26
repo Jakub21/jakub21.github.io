@@ -167,6 +167,9 @@ section .Content {
     font-size: 4em;
   }
 }
+#Landing a {
+  color: inherit;
+}
 #Landing p, #Landing button {
   position: relative;
   margin: 2em;

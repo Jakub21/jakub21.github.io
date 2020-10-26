@@ -23,11 +23,19 @@ $html {
             $p {Contact me}
             $div[.Column] {
               $p[.Type] {E-mail address}
-              $p[.Value] {jakubp2101@gmail.com}
+              $p[.Value] {
+                $a[href 'mailto:jakubp2101@gmail' target _blank] {
+                  jakubp2101@gmail.com
+                }
+              }
             }
             $div[.Column] {
               $p[.Type] {Github profile}
-              $p[.Value] {github.com/Jakub21}
+              $p[.Value] {
+                $a[href 'https://github.com/Jakub21' target _blank] {
+                  github.com/Jakub21
+                }
+              }
             }
             $div[.Clear]
           }
