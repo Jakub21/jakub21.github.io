@@ -24,7 +24,7 @@ $html {
             $div[.Column] {
               $p[.Type] {E-mail address}
               $p[.Value] {
-                $a[href 'mailto:jakubp2101@gmail' target _blank] {
+                $a[href 'mailto:jakubp2101@gmail.com' target _blank] {
                   jakubp2101@gmail.com
                 }
               }
