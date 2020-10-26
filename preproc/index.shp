@@ -46,13 +46,13 @@ $html {
       $div[#Walkers .Project] {
       $div[.Background]
         $div[.Content] {
-          $h1 {Project Walkers}
+          $h2 {Project Walkers}
         }
       }
       $div[#Pluginable .Project] {
       $div[.Background]
         $div[.Content] {
-          $h1 {Project Pluginable}
+          $h2 {Project Pluginable}
         }
       }
     }

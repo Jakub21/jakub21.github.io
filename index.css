@@ -4,7 +4,7 @@ button {
   border: none;
   color: inherit;
   letter-spacing: inherit;
-  font-size: 1rem;
+  font-size: inherit;
   padding: 0.75em 1.5em;
   transition: background 0.3s ease;
 }
@@ -27,15 +27,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3.25rem;
+  font-size: 3.25em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 [hidden] {
@@ -60,6 +60,11 @@ body {
   font-size: 1.05rem;
   font-family: "Open Sans";
   letter-spacing: 0.04em;
+}
+@media only screen and (min-resolution: 150dpi) and (orientation: portrait) {
+  body {
+    font-size: 2rem;
+  }
 }
 
 .Background {
@@ -135,12 +140,15 @@ section .Content {
   position: relative;
   text-align: center;
   color: #FFF;
-  max-width: 85%;
   z-index: 200;
+}
+@media only screen and (max-resolution: 149dpi) {
+  section .Content {
+    max-width: 85%;
+  }
 }
 
 #Landing {
-  font-size: 1.05rem;
   display: flex;
 }
 #Landing h1 {
@@ -151,12 +159,12 @@ section .Content {
 }
 @media only screen and (max-resolution: 149dpi) and (max-width: 671px) {
   #Landing h1 {
-    font-size: 3rem;
+    font-size: 3em;
   }
 }
 @media only screen and (max-resolution: 149dpi) and (min-width: 1152px) {
   #Landing h1 {
-    font-size: 4rem;
+    font-size: 4em;
   }
 }
 #Landing p, #Landing button {
@@ -176,23 +184,43 @@ section .Content {
 }
 #Landing #Contact {
   text-align: center;
-  display: flex;
   position: fixed;
   bottom: 0;
   left: 0;
   margin-bottom: 1em;
-  align-content: center;
   width: 100vw;
 }
-#Landing #Contact .Container {
-  margin: auto;
+@media only screen and (max-resolution: 149dpi) {
+  #Landing #Contact {
+    display: flex;
+    align-content: center;
+  }
+  #Landing #Contact .Container {
+    margin: auto;
+  }
+  #Landing #Contact .Column {
+    color: #AAAD;
+    float: left;
+  }
+  #Landing #Contact .Column .Type, #Landing #Contact .Column .Value {
+    margin: 0.5em 3em;
+  }
 }
-#Landing #Contact .Column {
-  color: #AAAD;
-  float: left;
-}
-#Landing #Contact .Column .Type, #Landing #Contact .Column .Value {
-  margin: 0.5em 3em;
+@media only screen and (min-resolution: 150dpi) {
+  #Landing #Contact {
+    display: flex;
+    align-content: center;
+  }
+  #Landing #Contact .Container {
+    margin: auto;
+  }
+  #Landing #Contact .Column {
+    color: #AAAD;
+    float: left;
+  }
+  #Landing #Contact .Type {
+    display: none;
+  }
 }
 
 #Projects .Background {
@@ -205,18 +233,22 @@ section .Content {
 }
 #Projects #Index .Element {
   border-bottom: 1px solid #666;
-  max-width: 1000px;
-  margin: 1em auto;
   padding: 0.5em;
   opacity: 0.7;
   transition: opacity 0.3s ease;
+}
+@media only screen and (max-resolution: 149dpi) {
+  #Projects #Index .Element {
+    max-width: 1000px;
+    margin: 1em auto;
+  }
 }
 #Projects #Index .Element:hover {
   opacity: 1;
 }
 #Projects #Index .Element .Name {
   float: left;
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 #Projects #Index .Element .Badges {
   float: right;

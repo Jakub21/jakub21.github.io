@@ -11,6 +11,9 @@ html, body {
 
 body {
   font-size: 1.05rem;
+  @include breakpoint(hires portrait) {
+    font-size: 2rem;
+  }
   font-family: 'Open Sans';
   letter-spacing: .04em;
 }
@@ -61,13 +64,14 @@ section {
     position: relative;
     text-align: center;
     color: $FgPrimary;
-    max-width: 85%;
     z-index: 200;
+    @include breakpoint(lowres) {
+      max-width: 85%;
+    }
   }
 }
 
 #Landing {
-  font-size: 1.05rem;
   display: flex;
   h1 {
     position: relative;
@@ -75,10 +79,10 @@ section {
     margin-bottom: 3em;
     animation: SlideInFromTop 2s ease;
     @include breakpoint(lowres compact) {
-      font-size: 3rem;
+      font-size: 3em;
     }
     @include breakpoint(lowres wide) {
-      font-size: 4rem;
+      font-size: 4em;
     }
   }
   p, button {
@@ -98,21 +102,28 @@ section {
   }
   #Contact {
     text-align: center;
-    display: flex;
     position: fixed;
     bottom: 0; left: 0;
     margin-bottom: 1em;
-    align-content: center;
     width: 100vw;
-    .Container {
-      margin: auto;
-    }
-    .Column {
-      color: $FgFaded;
-      float: left;
-      .Type, .Value {
-        margin: .5em 3em;
+    @include breakpoint(lowres) {
+      display: flex;
+      align-content: center;
+      .Container { margin: auto; }
+      .Column {
+        color: $FgFaded;
+        float: left;
+        .Type, .Value {
+          margin: .5em 3em;
+        }
       }
+    }
+    @include breakpoint(hires) {
+      display: flex;
+      align-content: center;
+      .Container { margin: auto; }
+      .Column { color: $FgFaded; float: left; }
+      .Type {display: none; }
     }
   }
 }
@@ -128,9 +139,11 @@ section {
   }
   #Index {
     .Element {
+      @include breakpoint(lowres) {
+        max-width: 1000px;
+        margin: 1em auto;
+      }
       border-bottom: 1px solid #666;
-      max-width: 1000px;
-      margin: 1em auto;
       padding: .5em;
       opacity: .7;
       transition: opacity .3s ease;
@@ -139,7 +152,7 @@ section {
       }
       .Name {
         float: left;
-        font-size: 1.2rem;
+        font-size: 1.2em;
       }
       .Badges { float: right; margin-right: 1em; }
     }
