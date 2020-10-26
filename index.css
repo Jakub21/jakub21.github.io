@@ -1,18 +1,245 @@
-/* Error: Undefined variable.
- *   ,
- * 2 |   background: $BgButton;
- *   |               ^^^^^^^^^
- *   '
- *   preproc\sass\elements.scss 2:15  @import
- *   preproc\sass\index.scss 2:9      root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 2 \2502    background: $BgButton;\a   \2502                ^^^^^^^^^\a   \2575 \a   preproc\\sass\\elements.scss 2:15  @import\a   preproc\\sass\\index.scss 2:9      root stylesheet";
+button {
+  background: #CCC3;
+  border-radius: 0.16em;
+  border: none;
+  color: inherit;
+  letter-spacing: inherit;
+  font-size: 1rem;
+  padding: 0.75em 1.5em;
+  transition: background 0.3s ease;
 }
+button:hover {
+  background: #CCC6;
+}
+
+a {
+  color: #B8C;
+  text-decoration: underline;
+  transition: color ease 0.3s;
+}
+a:hover {
+  color: #DAE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-family: "Montserrat";
+}
+
+h1 {
+  font-size: 3.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.Hidden {
+  opacity: 0;
+}
+
+.Clear {
+  clear: both;
+}
+
+html, body {
+  margin: 0;
+  background-color: #000;
+  color: #FFF;
+}
+
+body {
+  font-size: 1.05rem;
+  font-family: "Open Sans";
+  letter-spacing: 0.04em;
+}
+
+.Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(1em) saturate(50%);
+}
+
+@keyframes SlideInFromTop {
+  0% {
+    bottom: 1.5em;
+    opacity: 0;
+  }
+  30% {
+    bottom: 1.5em;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes SlideInFromBottom {
+  0% {
+    top: 1.5em;
+    opacity: 0;
+  }
+  30% {
+    top: 1.5em;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes SlideOutToTop {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: 4em;
+    opacity: 0;
+  }
+}
+.SlideOut .Content {
+  animation: SlideOutToTop 0.5s ease-in;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  align-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+section .Background {
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: luminosity;
+  filter: blur(0.3em) brightness(60%);
+  z-index: 100;
+}
+section .Content {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  color: #FFF;
+  max-width: 85%;
+  z-index: 200;
+}
+
+#Landing {
+  font-size: 1.05rem;
+  display: flex;
+}
+#Landing h1 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 3em;
+  animation: SlideInFromTop 2s ease;
+}
+@media only screen and (max-resolution: 149dpi) and (max-width: 671px) {
+  #Landing h1 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-resolution: 149dpi) and (min-width: 1152px) {
+  #Landing h1 {
+    font-size: 4rem;
+  }
+}
+#Landing p, #Landing button {
+  position: relative;
+  margin: 2em;
+  animation: SlideInFromBottom 2s ease;
+}
+#Landing.SlideOut .Background {
+  animation: SlideOutToTop 0.5s ease-in;
+}
+#Landing .Background {
+  background-image: url("coding.jpg");
+  background-color: #003F7F;
+}
+#Landing.SlideOut #Contact {
+  animation: SlideOutToTop 0.5s ease-in;
+}
+#Landing #Contact {
+  text-align: center;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 1em;
+  align-content: center;
+  width: 100vw;
+}
+#Landing #Contact .Container {
+  margin: auto;
+}
+#Landing #Contact .Column {
+  color: #AAAD;
+  float: left;
+}
+#Landing #Contact .Column .Type, #Landing #Contact .Column .Value {
+  margin: 0.5em 3em;
+}
+
+#Projects .Background {
+  background-color: #0500;
+  background-attachment: fixed;
+  background-size: 3em;
+  background-position: left;
+  background-repeat: repeat;
+  background-blend-mode: normal;
+}
+#Projects #Index .Element {
+  border-bottom: 1px solid #666;
+  max-width: 1000px;
+  margin: 1em auto;
+  padding: 0.5em;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+#Projects #Index .Element:hover {
+  opacity: 1;
+}
+#Projects #Index .Element .Name {
+  float: left;
+  font-size: 1.2rem;
+}
+#Projects #Index .Element .Badges {
+  float: right;
+  margin-right: 1em;
+}
+#Projects .Project {
+  transition: opacity 0.5s ease;
+  padding: 1.5em;
+}
+#Projects .Project .Background {
+  background-image: url("grid_cell_s.png");
+}
+#Projects .Project#Index .Background {
+  background-image: url("grid_cell_p.png");
+}
+#Projects .Back {
+  padding: 0.5em 0.8em;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.1em;
+  color: #6CD;
+}
+
+/*# sourceMappingURL=index.css.map */
