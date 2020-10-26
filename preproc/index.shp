@@ -1,0 +1,60 @@
+@doctype
+$html {
+  $head {
+    $title {Projects Index}
+    %meta[charset 'utf-8']
+    %link[rel stylesheet
+      href 'https://fonts.googleapis.com/css?family=Montserrat']
+    %link[rel stylesheet
+      href 'https://fonts.googleapis.com/css?family=Open+Sans']
+    %link[rel stylesheet href 'index.css']
+    $script[src 'js/Domi.js']
+    $script[src 'js/Main.js']
+  }
+  $body[onload 'main()'] {
+    $section[#Landing] {
+      $div[.Background]
+      $div[.Content] {
+        $h1 {Projects Index}
+        $p {List of projects I have made over the years.}
+        $button[onclick 'goto("Projects")'] {Continue}
+        $div[#Contact] {
+          $div[.Container] {
+            $p {Contact me}
+            $div[.Column] {
+              $p[.Type] {E-mail address}
+              $p[.Value] {jakubp2101@gmail.com}
+            }
+            $div[.Column] {
+              $p[.Type] {Github profile}
+              $p[.Value] {github.com/Jakub21}
+            }
+            $div[.Clear]
+          }
+        }
+      }
+    }
+    $section[#Projects] {
+      $div[#Index .Project] {
+      $div[.Background]
+        $div[.Content] {
+          $button[.Back onclick 'goto("Landing");'] {<}
+          $h2 {Index}
+          $ul[#IndexListing]
+        }
+      }
+      $div[#Walkers .Project] {
+      $div[.Background]
+        $div[.Content] {
+          $h1 {Project Walkers}
+        }
+      }
+      $div[#Pluginable .Project] {
+      $div[.Background]
+        $div[.Content] {
+          $h1 {Project Pluginable}
+        }
+      }
+    }
+  }
+}

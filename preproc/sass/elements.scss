@@ -1,0 +1,40 @@
+button {
+  background: $BgButton;
+  border-radius: .16em;
+  border: none;
+  color: inherit;
+  letter-spacing: inherit;
+  font-size: 1rem;
+  padding: .75em 1.5em;
+  transition: background .3s ease;
+  &:hover {
+    background: $BgButtonHover;
+  }
+}
+
+a {
+  color: $FgLink;
+  text-decoration: underline;
+  transition: color ease .3s;
+  &:hover {
+    color: $FgLinkHover;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-family: 'Montserrat';
+}
+h1 { font-size: 3.25rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+[hidden] {
+  display: none !important;
+}
+.Hidden {
+  opacity: 0;
+}
+.Clear {
+  clear: both;
+}

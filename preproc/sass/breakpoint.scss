@@ -1,0 +1,30 @@
+
+// Breakpoints
+$HiRes: 150dpi;
+$bptStandard: 1920px * .35;
+$bptWide: 1920px * .6;
+
+// Media queries as mixins based on https://stackoverflow.com/a/49421832
+$mediaQueries : (
+  // Resolution
+  'lowres': unquote('and (max-resolution: #{$HiRes - 1dpi})'),
+  'hires': unquote('and (min-resolution: #{$HiRes})'),
+  // Screen width
+  'compact': unquote('and (max-width: #{$bptStandard - 1px})'),
+  'standard': unquote('and (min-width: #{$bptStandard}) and (max-width: #{$bptWide - 1px}) and (max-resolution: #{$HiRes})'),
+  'wide': unquote('and (min-width: #{$bptWide})'),
+  // Screen orientation
+  'landscape': unquote('and (orientation: landscape) '),
+  'portrait': unquote('and (orientation: portrait) ')
+);
+
+@mixin breakpoint($breakpoints) {
+  $conditions : ("only screen");
+  @each $breakpoint in $breakpoints {
+    $conditions: append(
+      $conditions, #{inspect(map-get($mediaQueries, $breakpoint))}, space);
+  }
+  @media #{$conditions} {
+      @content;
+  }
+}

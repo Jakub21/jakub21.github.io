@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Projects Index</title>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel='stylesheet' href='index.css'>
+    <script src='js/Domi.js'></script>
+    <script src='js/Main.js'></script>
+  </head>
+  <body onload='main()'>
+    <section id='Landing'>
+      <div class='Background'></div>
+      <div class='Content'>
+        <h1>Projects Index</h1>
+        <p>List of projects I have made over the years.</p>
+        <button onclick='goto("Projects")'>Continue</button>
+        <div id='Contact'>
+          <div class='Container'>
+            <p>Contact me</p>
+            <div class='Column'>
+              <p class='Type'>E-mail address</p>
+              <p class='Value'>jakubp2101@gmail.com</p>
+            </div>
+            <div class='Column'>
+              <p class='Type'>Github profile</p>
+              <p class='Value'>github.com/Jakub21</p>
+            </div>
+            <div class='Clear'></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id='Projects'>
+      <div id='Index' class='Project'>
+        <div class='Background'></div>
+        <div class='Content'>
+          <button class='Back' onclick='goto("Landing");'><</button>
+          <h2>Index</h2>
+          <ul id='IndexListing'></ul>
+        </div>
+      </div>
+      <div id='Walkers' class='Project'>
+        <div class='Background'></div>
+        <div class='Content'>
+          <h1>Project Walkers</h1>
+        </div>
+      </div>
+      <div id='Pluginable' class='Project'>
+        <div class='Background'></div>
+        <div class='Content'>
+          <h1>Project Pluginable</h1>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
