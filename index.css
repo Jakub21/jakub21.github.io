@@ -179,7 +179,7 @@ section .Content {
   animation: SlideOutToTop 0.5s ease-in;
 }
 #Landing .Background {
-  background-image: url("coding.jpg");
+  background-image: url("img/coding.jpg");
   background-color: #003F7F;
 }
 #Landing.SlideOut #Contact {
@@ -262,10 +262,10 @@ section .Content {
   padding: 1.5em;
 }
 #Projects .Project .Background {
-  background-image: url("grid_cell_s.png");
+  background-image: url("img/grid_cell_s.png");
 }
 #Projects .Project#Index .Background {
-  background-image: url("grid_cell_p.png");
+  background-image: url("img/grid_cell_p.png");
 }
 #Projects .Back {
   padding: 0.5em 0.8em;

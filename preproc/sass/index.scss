@@ -97,7 +97,7 @@ section {
     animation: SlideOutToTop .5s ease-in;
   }
   .Background {
-    background-image: url('coding.jpg');
+    background-image: url('img/coding.jpg');
     background-color: $BgPrimary;
   }
   &.SlideOut #Contact {
@@ -164,10 +164,10 @@ section {
     transition: opacity .5s ease;
     padding: 1.5em;
     .Background {
-      background-image: url('grid_cell_s.png');
+      background-image: url('img/grid_cell_s.png');
     }
     &#Index .Background {
-      background-image: url('grid_cell_p.png');
+      background-image: url('img/grid_cell_p.png');
     }
   }
   .Back {
