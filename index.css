@@ -243,7 +243,7 @@ section .Content {
 @media only screen and (max-resolution: 149dpi) {
   #Projects #Index .Element {
     max-width: 1000px;
-    margin: 1em auto;
+    margin: 1.5em auto 1em;
   }
 }
 #Projects #Index .Element:hover {
@@ -256,6 +256,11 @@ section .Content {
 #Projects #Index .Element .Badges {
   float: right;
   margin-right: 1em;
+}
+#Projects #Index .Element img.Badge {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.4em;
 }
 #Projects .Project {
   transition: opacity 0.5s ease;

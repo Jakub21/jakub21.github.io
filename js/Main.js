@@ -1,6 +1,16 @@
 let mainSwitcher, projectsSwitcher;
 let list;
 
+let badgeDescriptions = {
+  js: 'Written in Javascript',
+  py: 'Written in Python',
+  app: 'This is an Application',
+  util: 'This is an utility package',
+  algo: 'This project features algorithms',
+  prog: 'This project is in progress',
+  old: 'This project is old'
+};
+
 let main = () => {
   mainSwitcher = new Switcher();
   mainSwitcher.addSection(new Section('landing', $id('Landing')));
@@ -10,8 +20,15 @@ let main = () => {
   list = $id('IndexListing');
   projectsSwitcher = new Switcher();
   projectsSwitcher.addSection(new Section('index', $id('Index')));
-  addProject('Walkers', 'walkers', $id('Walkers'));
-  addProject('Pluginable', 'pluginable', $id('Pluginable'));
+  addProject('Walking Blobs', 'walkers', $id('Walkers'), ['app', 'algo', 'js']);
+  addProject('Rover Soft', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'py']);
+  addProject('Domi.js library', 'domi', $id('Domi'), ['util', 'js']);
+  addProject('Static HTML Preprocessor', 'shp', $id('SHP'), ['util', 'py']);
+  addProject('Pluginable', 'pluginable', $id('Pluginable'), ['util', 'py']);
+  addProject('TkInter Wrapper', 'tkiw', $id('TkInterWrapper'), ['util', 'py']);
+  addProject('CIS Protocol', 'cis', $id('CIS'), ['util', 'py']);
+  addProject('Maze Pathfinder', 'pathfinder', $id('Pathfinder'), ['algo', 'old', 'py']);
+  addProject('TCP Communicator', 'pyComm', $id('PyComm'), ['app', 'old', 'py']);
 
   let clear = $create('div');
   clear.classList.add('Clear');
@@ -19,7 +36,7 @@ let main = () => {
   projectsSwitcher.goto('index');
 };
 
-let addProject = (name, id, element) => {
+let addProject = (name, id, element, badges=[]) => {
   projectsSwitcher.addSection(new Section(id, element));
 
   let container = $create('div');
@@ -32,10 +49,16 @@ let addProject = (name, id, element) => {
   nameElement.innerText = name;
   container.appendChild(nameElement);
 
-  let badges = $create('div');
-  badges.classList.add('Badges');
-  badges.innerText = '<badges go here>';
-  container.appendChild(badges);
+  let badgesElement = $create('div');
+  badgesElement.classList.add('Badges');
+  for (let badgeName of badges) {
+    let badge = $create('img');
+    badge.classList.add('Badge');
+    badge.src = `img/badges/${badgeName}.png`;
+    badge.title = badgeDescriptions[badgeName];
+    badgesElement.appendChild(badge);
+  }
+  container.appendChild(badgesElement);
 
   let clear = $create('div');
   clear.classList.add('Clear');
