@@ -10,36 +10,79 @@
   }
   #Index {
     .Element {
-      @include breakpoint(lowres compact) {
-        margin: 1em auto;
-      }
-      @include breakpoint(lowres standard) {
-        width: calc(50% - 2em);
-        margin: 1em;
-        float: left;
-      }
-      @include breakpoint(lowres wide) {
-        width: calc(33% - 2em);
-        margin: 1em;
-        float: left;
-      }
+      text-align: left;
       box-sizing: border-box;
       border-bottom: 1px solid #666;
-      padding: .5em;
+      padding: 1em .5em;
       opacity: .6;
       transition: opacity .3s ease;
       &:hover {
         opacity: 1;
       }
-      .Name {
+      .Left {
         float: left;
+        width: calc(100% - 18em);
+      }
+      .Name {
         font-size: 1.2em;
       }
-      .Badges { float: right; }
-      img.Badge {
-        width: 1.5em; height: 1.5em;
-        margin-left: .5em;
+      .Badges {
+        float: right;
+        transition: max-height .75s ease;
       }
+      .Badge {
+        text-align: right;
+        display: inline-block;
+        margin-left: .5em;
+        img {
+          width: 1.5em; height: 1.5em;
+        }
+      }
+      .Description {
+        padding: 0 .5em;
+        transition: max-height .75s ease;
+        overflow: hidden;
+        border-right: 1px solid #ccc3;
+        button {
+          margin: 1em auto .2em;
+          padding: .2em .5em;
+          display: block;
+        }
+      }
+      &.DetailsOn {
+        .Description {
+          max-height: 10em; // NOTE: auto does not work
+        }
+        .Badges {
+          max-height: 8em;
+        }
+        .Badge {
+          display: block;
+          &::before {
+            position: relative;
+            bottom: .5em; right: .5em;
+            font-size: .85em;
+            opacity: .4;
+            content: attr(title);
+            display: inline-block;
+          }
+        }
+      }
+      &.DetailsOff {
+        .Description {
+          max-height: 0;
+        }
+        .Badges {
+          max-height: 2em;
+        }
+      }
+    }
+  }
+  #Index {
+    transition: opacity .5s ease;
+    padding: 1em;
+    .Background {
+      background-image: url('img/grid_cell_p.png');
     }
   }
   .Project {
@@ -47,9 +90,6 @@
     padding: 1.5em;
     .Background {
       background-image: url('img/grid_cell_s.png');
-    }
-    &#Index .Background {
-      background-image: url('img/grid_cell_p.png');
     }
   }
   .Back {

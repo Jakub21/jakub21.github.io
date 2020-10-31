@@ -179,45 +179,77 @@ h3 {
   background-blend-mode: normal;
 }
 #Projects #Index .Element {
+  text-align: left;
   box-sizing: border-box;
   border-bottom: 1px solid #666;
-  padding: 0.5em;
+  padding: 1em 0.5em;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-}
-@media only screen and (max-resolution: 149dpi) and (max-width: 1055px) {
-  #Projects #Index .Element {
-    margin: 1em auto;
-  }
-}
-@media only screen and (max-resolution: 149dpi) and (min-width: 1056px) and (max-width: 1535px) and (max-resolution: 150dpi) {
-  #Projects #Index .Element {
-    width: calc(50% - 2em);
-    margin: 1em;
-    float: left;
-  }
-}
-@media only screen and (max-resolution: 149dpi) and (min-width: 1536px) {
-  #Projects #Index .Element {
-    width: calc(33% - 2em);
-    margin: 1em;
-    float: left;
-  }
 }
 #Projects #Index .Element:hover {
   opacity: 1;
 }
-#Projects #Index .Element .Name {
+#Projects #Index .Element .Left {
   float: left;
+  width: calc(100% - 18em);
+}
+#Projects #Index .Element .Name {
   font-size: 1.2em;
 }
 #Projects #Index .Element .Badges {
   float: right;
+  transition: max-height 0.75s ease;
 }
-#Projects #Index .Element img.Badge {
+#Projects #Index .Element .Badge {
+  text-align: right;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+#Projects #Index .Element .Badge img {
   width: 1.5em;
   height: 1.5em;
-  margin-left: 0.5em;
+}
+#Projects #Index .Element .Description {
+  padding: 0 0.5em;
+  transition: max-height 0.75s ease;
+  overflow: hidden;
+  border-right: 1px solid #ccc3;
+}
+#Projects #Index .Element .Description button {
+  margin: 1em auto 0.2em;
+  padding: 0.2em 0.5em;
+  display: block;
+}
+#Projects #Index .Element.DetailsOn .Description {
+  max-height: 10em;
+}
+#Projects #Index .Element.DetailsOn .Badges {
+  max-height: 8em;
+}
+#Projects #Index .Element.DetailsOn .Badge {
+  display: block;
+}
+#Projects #Index .Element.DetailsOn .Badge::before {
+  position: relative;
+  bottom: 0.5em;
+  right: 0.5em;
+  font-size: 0.85em;
+  opacity: 0.4;
+  content: attr(title);
+  display: inline-block;
+}
+#Projects #Index .Element.DetailsOff .Description {
+  max-height: 0;
+}
+#Projects #Index .Element.DetailsOff .Badges {
+  max-height: 2em;
+}
+#Projects #Index {
+  transition: opacity 0.5s ease;
+  padding: 1em;
+}
+#Projects #Index .Background {
+  background-image: url("img/grid_cell_p.png");
 }
 #Projects .Project {
   transition: opacity 0.5s ease;
@@ -225,9 +257,6 @@ h3 {
 }
 #Projects .Project .Background {
   background-image: url("img/grid_cell_s.png");
-}
-#Projects .Project#Index .Background {
-  background-image: url("img/grid_cell_p.png");
 }
 #Projects .Back {
   padding: 0.5em 0.8em;
@@ -287,9 +316,14 @@ section .Content {
   color: #FFF;
   z-index: 200;
 }
-@media only screen and (max-resolution: 149dpi) {
+@media only screen and (max-resolution: 149dpi) and (min-width: 1056px) and (max-width: 1535px) and (max-resolution: 150dpi) {
   section .Content {
     max-width: 85%;
+  }
+}
+@media only screen and (max-resolution: 149dpi) and (min-width: 1536px) {
+  section .Content {
+    max-width: 75%;
   }
 }
 
