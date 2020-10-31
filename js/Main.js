@@ -21,14 +21,13 @@ let main = () => {
   projectsSwitcher = new Switcher();
   projectsSwitcher.addSection(new Section('index', $id('Index')));
   addProject('Walking Blobs', 'walkers', $id('Walkers'), ['app', 'algo', 'js']);
-  addProject('Rover Soft', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'py']);
-  addProject('Domi.js library', 'domi', $id('Domi'), ['util', 'js']);
+  addProject('The Rover Software', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'py']);
+  addProject('Domi.js Package', 'domi', $id('Domi'), ['util', 'js']);
   addProject('Static HTML Preprocessor', 'shp', $id('SHP'), ['util', 'py']);
-  addProject('Pluginable', 'pluginable', $id('Pluginable'), ['util', 'py']);
-  addProject('TkInter Wrapper', 'tkiw', $id('TkInterWrapper'), ['util', 'py']);
+  addProject('Pluginable Package', 'pluginable', $id('Pluginable'), ['util', 'py']);
+  addProject('TkInter Wrapper Package', 'tkiw', $id('TkInterWrapper'), ['util', 'prog', 'py']);
   addProject('CIS Protocol', 'cis', $id('CIS'), ['util', 'py']);
   addProject('Maze Pathfinder', 'pathfinder', $id('Pathfinder'), ['algo', 'old', 'py']);
-  addProject('TCP Communicator', 'pyComm', $id('PyComm'), ['app', 'old', 'py']);
 
   let clear = $create('div');
   clear.classList.add('Clear');

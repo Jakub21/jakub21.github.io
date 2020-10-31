@@ -54,55 +54,50 @@ $html {
       $div[#Walkers .Project] {
       $div[.Background]
         $div[.Content] {
-          $h2 {Project Walkers}
-        }
-      }
-      $div[#Pluginable .Project] {
-      $div[.Background]
-        $div[.Content] {
-          $h2 {Project Pluginable}
-        }
-      }
-      $div[#Domi .Project] {
-        $div[.Background]
-        $div[.Content] {
-          $h2 {Project Domi}
-        }
-      }
-      $div[#TkInterWrapper .Project] {
-        $div[.Background]
-        $div[.Content] {
-          $h2 {Project TkInter Wrapper}
+          $h2 {Walking Blobs}
         }
       }
       $div[#RoverSoft .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Project RoverSoft}
+          $h2 {The Rover Software}
         }
       }
-      $div[#Pathfinder .Project] {
+      $div[#Domi .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Project Pathfinder}
-        }
-      }
-      $div[#PyComm .Project] {
-        $div[.Background]
-        $div[.Content] {
-          $h2 {Project PyComm}
+          $h2 {Domi.js Package}
         }
       }
       $div[#SHP .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Project Static HTMP Preprocessor}
+          $h2 {Static HTML Preprocessor}
+        }
+      }
+      $div[#Pluginable .Project] {
+      $div[.Background]
+        $div[.Content] {
+          $h2 {Pluginable Package}
+        }
+      }
+      $div[#TkInterWrapper .Project] {
+        $div[.Background]
+        $div[.Content] {
+          $h2 {TkInter Wrapper Package}
         }
       }
       $div[#CIS .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Project Compact Instruction Sequences}
+          $h2 {CIS Protocol}
+          Compact Instruction Sequences
+        }
+      }
+      $div[#Pathfinder .Project] {
+        $div[.Background]
+        $div[.Content] {
+          $h2 {Maze Pathfinder}
         }
       }
     }
