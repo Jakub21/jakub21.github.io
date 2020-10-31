@@ -1,5 +1,6 @@
 let mainSwitcher, projectsSwitcher;
 let list;
+let detailsToggles = {};
 
 let badgeDescriptions = {
   js: 'Written in Javascript',
@@ -9,6 +10,17 @@ let badgeDescriptions = {
   algo: 'This project features algorithms',
   prog: 'This project is in progress',
   old: 'This project is old'
+};
+
+let projectDetails = {
+  walkers: 'Mini app where you can watch blobs search for food and escape predators.',
+  roverSoft: 'GUI app made to control a Raspberry Pi powered rover.',
+  domi: 'Set of classes and aliases for building single page apps.',
+  shp: 'HTML Preprocessor for static files.',
+  pluginable: 'Framework for creating modular apps. Utilizes multiprocessing and features event based communication.',
+  tkiw: 'TkInter wrapper package. Used to build GUI of desktop apps.',
+  cis: 'TCP Communication protocol. Primarily designed for the rover project.',
+  pathfinder: 'Showcase of a pathfinding algorithm.',
 };
 
 let main = () => {
@@ -23,7 +35,7 @@ let main = () => {
   addProject('Walking Blobs', 'walkers', $id('Walkers'), ['app', 'algo', 'js']);
   addProject('The Rover Software', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'py']);
   addProject('Domi.js Package', 'domi', $id('Domi'), ['util', 'js']);
-  addProject('Static HTML Preprocessor', 'shp', $id('SHP'), ['util', 'py']);
+  addProject('Static HTML Preprocessor', 'shp', $id('SHP'), ['util', 'py', 'js']);
   addProject('Pluginable Package', 'pluginable', $id('Pluginable'), ['util', 'py']);
   addProject('TkInter Wrapper Package', 'tkiw', $id('TkInterWrapper'), ['util', 'prog', 'py']);
   addProject('CIS Protocol', 'cis', $id('CIS'), ['util', 'py']);
@@ -35,33 +47,37 @@ let main = () => {
   projectsSwitcher.goto('index');
 };
 
+
 let addProject = (name, id, element, badges=[]) => {
   projectsSwitcher.addSection(new Section(id, element));
 
-  let container = $create('div');
-  container.classList.add('Element');
-  container.onclick = () => {gotoProject(id);}
-  list.appendChild(container);
+  let shp = `
+  $div[.Element onclick 'openDetails("${id}");'] {
+    $div[.Left] {
+      $div [.Name] {
+        ${name}
+      }
+      $div[.Description] {
+        $div {${projectDetails[id]}}
+        $button[onclick 'gotoProject("${id}");'] {Read more}
+      }
+    }
+    $div[.Badges] {
+  `; for (let badge of badges) { shp += `
+      $div[.Badge title '${badgeDescriptions[badge]}'] {
+        $img[src img/badges/${badge}.png alt '${badgeDescriptions[badge]}']
+      }
+  `; } shp += `
+    }
+    $div[.Clear]
+  }`;
+  let builder = new ShpCompiler();
+  let entry = builder.compile(shp)[0];
+  list.appendChild(entry);
 
-  let nameElement = $create('div');
-  nameElement.classList.add('Name');
-  nameElement.innerText = name;
-  container.appendChild(nameElement);
-
-  let badgesElement = $create('div');
-  badgesElement.classList.add('Badges');
-  for (let badgeName of badges) {
-    let badge = $create('img');
-    badge.classList.add('Badge');
-    badge.src = `img/badges/${badgeName}.png`;
-    badge.title = badgeDescriptions[badgeName];
-    badgesElement.appendChild(badge);
-  }
-  container.appendChild(badgesElement);
-
-  let clear = $create('div');
-  clear.classList.add('Clear');
-  container.appendChild(clear);
+  let detailsToggle = new DomStateToggle(entry, false, {
+    trueClass: 'DetailsOn', falseClass: 'DetailsOff'});
+  detailsToggles[id] = detailsToggle;
 
   let back = $create('button');
   back.classList.add('Back');
@@ -101,4 +117,11 @@ let goto = (to) => {
     $id(to).classList.remove('Hidden');
     $id(from).classList.remove('SlideOut');
   }, 550);
+};
+
+let openDetails = (id) => {
+  for (let toggle of Object.values(detailsToggles)) {
+    toggle.off();
+  }
+  detailsToggles[id].on();
 };
