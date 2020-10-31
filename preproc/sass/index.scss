@@ -1,6 +1,10 @@
 @import 'colors';
 @import 'breakpoint';
 @import 'elements';
+@import 'animations';
+
+@import 'section/landing';
+@import 'section/projects';
 
 
 html, body {
@@ -22,25 +26,6 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  filter: blur(1em) saturate(50%);
-}
-
-@keyframes SlideInFromTop {
-  0%   { bottom: 1.5em; opacity: 0; }
-  30%  { bottom: 1.5em; opacity: 0; }
-  100% { bottom: 0;     opacity: 1; }
-}
-@keyframes SlideInFromBottom {
-  0%   { top: 1.5em; opacity: 0; }
-  30%  { top: 1.5em; opacity: 0; }
-  100% { top: 0;     opacity: 1; }
-}
-@keyframes SlideOutToTop {
-  0%   { bottom: 0;   opacity: 1; }
-  100% { bottom: 4em; opacity: 0; }
-}
-.SlideOut .Content {
-  animation: SlideOutToTop .5s ease-in;
 }
 
 section {
@@ -51,7 +36,6 @@ section {
   opacity: 1;
   transition: opacity .5s ease;
   .Background {
-    height: 100%;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -71,125 +55,7 @@ section {
   }
 }
 
-#Landing {
-  display: flex;
-  h1 {
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 3em;
-    animation: SlideInFromTop 2s ease;
-    @include breakpoint(lowres compact) {
-      font-size: 3em;
-    }
-    @include breakpoint(lowres wide) {
-      font-size: 4em;
-    }
-  }
-  a {
-    color: inherit;
-  }
-  p, button {
-    position: relative;
-    margin: 2em;
-    animation: SlideInFromBottom 2s ease;
-  }
-  &.SlideOut .Background {
-    animation: SlideOutToTop .5s ease-in;
-  }
-  .Background {
-    background-image: url('img/coding.jpg');
-    background-color: $BgPrimary;
-  }
-  &.SlideOut #Contact {
-    animation: SlideOutToTop .5s ease-in;
-  }
-  #Contact {
-    text-align: center;
-    position: fixed;
-    bottom: 0; left: 0;
-    margin-bottom: 1em;
-    width: 100vw;
-    @include breakpoint(lowres) {
-      display: flex;
-      align-content: center;
-      .Container { margin: auto; }
-      .Column {
-        color: $FgFaded;
-        float: left;
-        .Type, .Value {
-          margin: .5em 3em;
-        }
-      }
-    }
-    @include breakpoint(hires) {
-      display: flex;
-      align-content: center;
-      .Container { margin: auto; }
-      .Column { color: $FgFaded; float: left; }
-      .Type {display: none; }
-    }
-  }
-}
-
-#Projects {
-  .Background {
-    background-color: #0500;
-    background-attachment: fixed;
-    background-size: 3em;
-    background-position: left;
-    background-repeat: repeat;
-    background-blend-mode: normal;
-  }
-  #Index {
-    .Element {
-      @include breakpoint(lowres compact) {
-        margin: 1em auto;
-      }
-      @include breakpoint(lowres standard) {
-        width: calc(50% - 2em);
-        margin: 1em;
-        float: left;
-      }
-      @include breakpoint(lowres wide) {
-        width: calc(33% - 2em);
-        margin: 1em;
-        float: left;
-      }
-      box-sizing: border-box;
-      border-bottom: 1px solid #666;
-      padding: .5em;
-      opacity: .6;
-      transition: opacity .3s ease;
-      &:hover {
-        opacity: 1;
-      }
-      .Name {
-        float: left;
-        font-size: 1.2em;
-      }
-      .Badges { float: right; }
-      img.Badge {
-        width: 1.5em; height: 1.5em;
-        margin-left: .5em;
-      }
-    }
-  }
-  .Project {
-    transition: opacity .5s ease;
-    padding: 1.5em;
-    .Background {
-      background-image: url('img/grid_cell_s.png');
-    }
-    &#Index .Background {
-      background-image: url('img/grid_cell_p.png');
-    }
-  }
-  .Back {
-    padding: .5em .8em;
-    box-sizing: border-box;
-    position: absolute;
-    top: 0; left: 0;
-    font-size: 1.1em;
-    color: $FgSecondary;
-  }
+.Clear {
+  float: none;
+  clear: both;
 }

@@ -1,0 +1,59 @@
+#Landing {
+  display: flex;
+  h1 {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 3em;
+    animation: SlideInFromTop 2s ease;
+    @include breakpoint(lowres compact) {
+      font-size: 3em;
+    }
+    @include breakpoint(lowres wide) {
+      font-size: 4em;
+    }
+  }
+  a {
+    color: inherit;
+  }
+  p, button {
+    position: relative;
+    margin: 2em;
+    animation: SlideInFromBottom 2s ease;
+  }
+  &.SlideOut .Background {
+    animation: SlideOutToTop .5s ease-in;
+  }
+  .Background {
+    background-image: url('img/coding.jpg');
+    background-color: $BgPrimary;
+  }
+  &.SlideOut #Contact {
+    animation: SlideOutToTop .5s ease-in;
+  }
+  #Contact {
+    text-align: center;
+    position: fixed;
+    bottom: 0; left: 0;
+    margin-bottom: 1em;
+    width: 100vw;
+    @include breakpoint(lowres) {
+      display: flex;
+      align-content: center;
+      .Container { margin: auto; }
+      .Column {
+        color: $FgFaded;
+        float: left;
+        .Type, .Value {
+          margin: .5em 3em;
+        }
+      }
+    }
+    @include breakpoint(hires) {
+      display: flex;
+      align-content: center;
+      .Container { margin: auto; }
+      .Column { color: $FgFaded; float: left; }
+      .Type {display: none; }
+    }
+  }
+}

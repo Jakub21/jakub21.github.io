@@ -1,0 +1,63 @@
+
+#Projects {
+  .Background {
+    background-color: #0500;
+    background-attachment: fixed;
+    background-size: 3em;
+    background-position: left;
+    background-repeat: repeat;
+    background-blend-mode: normal;
+  }
+  #Index {
+    .Element {
+      @include breakpoint(lowres compact) {
+        margin: 1em auto;
+      }
+      @include breakpoint(lowres standard) {
+        width: calc(50% - 2em);
+        margin: 1em;
+        float: left;
+      }
+      @include breakpoint(lowres wide) {
+        width: calc(33% - 2em);
+        margin: 1em;
+        float: left;
+      }
+      box-sizing: border-box;
+      border-bottom: 1px solid #666;
+      padding: .5em;
+      opacity: .6;
+      transition: opacity .3s ease;
+      &:hover {
+        opacity: 1;
+      }
+      .Name {
+        float: left;
+        font-size: 1.2em;
+      }
+      .Badges { float: right; }
+      img.Badge {
+        width: 1.5em; height: 1.5em;
+        margin-left: .5em;
+      }
+    }
+  }
+  .Project {
+    transition: opacity .5s ease;
+    padding: 1.5em;
+    .Background {
+      background-image: url('img/grid_cell_s.png');
+    }
+    &#Index .Background {
+      background-image: url('img/grid_cell_p.png');
+    }
+  }
+  .Back {
+    padding: .5em .8em;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; left: 0;
+    font-size: 1.1em;
+    color: $FgSecondary;
+  }
+}
