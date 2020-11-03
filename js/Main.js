@@ -14,12 +14,12 @@ let badgeDescriptions = {
 };
 
 let projectDetails = {
-  walkers: 'Mini app where you can watch blobs search for food and escape predators.',
+  walkers: 'Showcase of state-machine based algorithm. Blobs search for food and escape predators.',
+  domi: 'Set of classes and aliases for building single page web applications.',
+  shp: 'HTML Preprocessor for static pages. Javascript version allows dynamic creation of  DOM elements.',
   roverSoft: 'GUI app made to control a Raspberry Pi powered rover.',
-  domi: 'Set of classes and aliases for building single page apps.',
-  shp: 'HTML Preprocessor for static files.',
-  pluginable: 'Framework for creating modular apps. Utilizes multiprocessing and features event based communication.',
-  tkiw: 'TkInter wrapper package. Used to build GUI of desktop apps.',
+  pluginable: 'Framework for creating modular applications. Utilizes multiprocessing and features event based inter-plugin communication. Primarily designed for the rover project.',
+  tkiw: 'TkInter wrapper package. Used to build GUI for desktop apps.',
   cis: 'TCP Communication protocol. Primarily designed for the rover project.',
   pathfinder: 'Showcase of a pathfinding algorithm.',
 };
