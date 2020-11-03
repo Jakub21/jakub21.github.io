@@ -52,16 +52,16 @@ $html {
           $div[#IndexListing]
         }
       }
-      $div[#Walkers .Project] {
-      $div[.Background]
-        $div[.Content] {
-          $h2 {Walking Blobs}
-        }
-      }
-      $div[#RoverSoft .Project] {
+      $div[#Chat .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {The Rover Software}
+          $h2 {Web Chat}
+        }
+      }
+      $div[#Walkers .Project] {
+        $div[.Background]
+        $div[.Content] {
+          $h2 {Walking Blobs}
         }
       }
       $div[#Domi .Project] {
@@ -74,6 +74,12 @@ $html {
         $div[.Background]
         $div[.Content] {
           $h2 {Static HTML Preprocessor}
+        }
+      }
+      $div[#RoverSoft .Project] {
+        $div[.Background]
+        $div[.Content] {
+          $h2 {The Rover Software}
         }
       }
       $div[#Pluginable .Project] {

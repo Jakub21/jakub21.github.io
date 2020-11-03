@@ -14,6 +14,7 @@ let badgeDescriptions = {
 };
 
 let projectDetails = {
+  chat: 'Room based chat application for browsers. Users can send text, images and react to messages. Rooms can be either opened to public or kept private.',
   walkers: 'Showcase of state-machine based algorithm. Blobs search for food and escape predators.',
   domi: 'Set of classes and aliases for building single page web applications.',
   shp: 'HTML Preprocessor for static pages. Javascript version allows dynamic creation of  DOM elements.',
@@ -33,13 +34,13 @@ let main = () => {
   list = $id('IndexListing');
   projectsSwitcher = new Switcher();
   projectsSwitcher.addSection(new Section('index', $id('Index')));
+  addProject('Web Chat', 'chat', $id('Chat'), ['app', 'net', 'js']);
   addProject('Walking Blobs', 'walkers', $id('Walkers'), ['app', 'algo', 'js']);
-  addProject('The Rover Software', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'net', 'py']);
   addProject('Domi.js Package', 'domi', $id('Domi'), ['util', 'js']);
   addProject('Static HTML Preprocessor', 'shp', $id('SHP'), ['util', 'py', 'js']);
+  addProject('The Rover Software', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'net', 'py']);
   addProject('Pluginable Package', 'pluginable', $id('Pluginable'), ['util', 'py']);
   addProject('TkInter Wrapper Package', 'tkiw', $id('TkInterWrapper'), ['util', 'prog', 'py']);
-  addProject('CIS Protocol', 'cis', $id('CIS'), ['util', 'py']);
   addProject('CIS Protocol', 'cis', $id('CIS'), ['util', 'net', 'py']);
   addProject('Maze Pathfinder', 'pathfinder', $id('Pathfinder'), ['algo', 'old', 'py']);
 
