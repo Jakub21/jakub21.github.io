@@ -7,10 +7,10 @@ let badgeDescriptions = {
   py: 'Written in Python',
   app: 'This is an Application',
   util: 'This is an utility package',
-  algo: 'This project features algorithms',
-  prog: 'This project is in progress',
-  old: 'This project is old'
+  algo: 'Features algorithms',
+  prog: 'Work in progress',
   net: 'Networking project',
+  old: 'This project is old',
 };
 
 let projectDetails = {
