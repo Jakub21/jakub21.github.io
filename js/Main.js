@@ -10,6 +10,7 @@ let badgeDescriptions = {
   algo: 'This project features algorithms',
   prog: 'This project is in progress',
   old: 'This project is old'
+  net: 'Networking project',
 };
 
 let projectDetails = {
@@ -33,12 +34,13 @@ let main = () => {
   projectsSwitcher = new Switcher();
   projectsSwitcher.addSection(new Section('index', $id('Index')));
   addProject('Walking Blobs', 'walkers', $id('Walkers'), ['app', 'algo', 'js']);
-  addProject('The Rover Software', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'py']);
+  addProject('The Rover Software', 'roverSoft', $id('RoverSoft'), ['app', 'prog', 'net', 'py']);
   addProject('Domi.js Package', 'domi', $id('Domi'), ['util', 'js']);
   addProject('Static HTML Preprocessor', 'shp', $id('SHP'), ['util', 'py', 'js']);
   addProject('Pluginable Package', 'pluginable', $id('Pluginable'), ['util', 'py']);
   addProject('TkInter Wrapper Package', 'tkiw', $id('TkInterWrapper'), ['util', 'prog', 'py']);
   addProject('CIS Protocol', 'cis', $id('CIS'), ['util', 'py']);
+  addProject('CIS Protocol', 'cis', $id('CIS'), ['util', 'net', 'py']);
   addProject('Maze Pathfinder', 'pathfinder', $id('Pathfinder'), ['algo', 'old', 'py']);
 
   let clear = $create('div');
