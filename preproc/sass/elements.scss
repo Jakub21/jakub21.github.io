@@ -34,6 +34,7 @@ button {
   transition: background .3s ease;
   &:hover {
     background-color: $BgButtonHover;
+    cursor: pointer;
   }
 }
 
@@ -43,6 +44,7 @@ a {
   transition: color ease .3s;
   &:hover {
     color: $FgLinkHover;
+    cursor: pointer;
   }
 }
 
