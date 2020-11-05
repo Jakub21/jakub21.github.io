@@ -13,7 +13,7 @@ let main = () => {
 
   switchers.project = new AnimatedSwitcher();
   switchers.project.setAnimationData({
-    leavingCn:'Hidden', enteringCn:'Hidden', lDelay:200, eDelay:100});
+    leavingCn:'Hidden', enteringCn:'Hidden', lDelay:350, eDelay:50});
   switchers.project.addSection(new Section('index', $id('Index')));
   switchers.project.goto('index');
 
