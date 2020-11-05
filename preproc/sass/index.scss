@@ -33,8 +33,6 @@ section {
   height: 100vh;
   box-sizing: border-box;
   align-content: center;
-  opacity: 1;
-  transition: opacity .5s ease;
   .Background {
     background-attachment: fixed;
     background-size: cover;
@@ -49,6 +47,9 @@ section {
     text-align: center;
     color: $FgPrimary;
     z-index: 200;
+    bottom: 0;
+    transition: all .4s ease-in;
+    transition-property: opacity, bottom;
   }
 }
 

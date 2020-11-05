@@ -1,4 +1,5 @@
 
+// Landing screen animations
 @keyframes SlideInFromTop {
   0%   { bottom: 1.5em; opacity: 0; }
   30%  { bottom: 1.5em; opacity: 0; }
@@ -9,13 +10,13 @@
   30%  { top: 1.5em; opacity: 0; }
   100% { top: 0;     opacity: 1; }
 }
-@keyframes SlideOutToTop {
-  0%   { bottom: 0;   opacity: 1; }
-  100% { bottom: 4em; opacity: 0; }
-}
-.SlideOut .Content {
-  animation: SlideOutToTop .5s ease-in;
+
+// Switcher animation properties
+.SlideOut {
+  .Background { opacity: 0; }
+  .Content { bottom: 2em; opacity: 0; }
 }
 .Hidden {
-  opacity: 0;
+  .Background { opacity: 0; }
+  .Content { opacity: 0; }
 }

@@ -101,21 +101,18 @@ h3 {
     opacity: 1;
   }
 }
-@keyframes SlideOutToTop {
-  0% {
-    bottom: 0;
-    opacity: 1;
-  }
-  100% {
-    bottom: 4em;
-    opacity: 0;
-  }
+.SlideOut .Background {
+  opacity: 0;
 }
 .SlideOut .Content {
-  animation: SlideOutToTop 0.5s ease-in;
+  bottom: 2em;
+  opacity: 0;
 }
 
-.Hidden {
+.Hidden .Background {
+  opacity: 0;
+}
+.Hidden .Content {
   opacity: 0;
 }
 
@@ -146,15 +143,13 @@ h3 {
   margin: 2em;
   animation: SlideInFromBottom 2s ease;
 }
-#Landing.SlideOut .Background {
-  animation: SlideOutToTop 0.5s ease-in;
+#Landing.SlideOut #Contact {
+  bottom: 2em;
 }
 #Landing .Background {
   background-image: url("img/coding.jpg");
   background-color: #003F7F;
-}
-#Landing.SlideOut #Contact {
-  animation: SlideOutToTop 0.5s ease-in;
+  transition: opacity 0.4s ease-in;
 }
 #Landing #Contact {
   text-align: center;
@@ -163,6 +158,7 @@ h3 {
   left: 0;
   margin-bottom: 1em;
   width: 100vw;
+  transition: bottom 0.4s ease-in;
 }
 @media only screen and (max-resolution: 149dpi) {
   #Landing #Contact {
@@ -419,8 +415,6 @@ section {
   height: 100vh;
   box-sizing: border-box;
   align-content: center;
-  opacity: 1;
-  transition: opacity 0.5s ease;
 }
 section .Background {
   background-attachment: fixed;
@@ -436,6 +430,9 @@ section .Content {
   text-align: center;
   color: #FFF;
   z-index: 200;
+  bottom: 0;
+  transition: all 0.4s ease-in;
+  transition-property: opacity, bottom;
 }
 
 .Clear {
