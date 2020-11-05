@@ -16,9 +16,8 @@ button.SquareButton, a.SquareButton {
   }
 }
 
-.Back {background-image: url('img/buttons/back.png');}
-
 .Back {
+  background-image: url('img/buttons/back.png');
   position: absolute;
   top: .5em; left: .5em;
 }

@@ -17,9 +17,6 @@ button.SquareButton:hover, a.SquareButton:hover {
 
 .Back {
   background-image: url("img/buttons/back.png");
-}
-
-.Back {
   position: absolute;
   top: 0.5em;
   left: 0.5em;
@@ -37,6 +34,7 @@ button {
 }
 button:hover {
   background-color: #CCC6;
+  cursor: pointer;
 }
 
 a {
@@ -46,6 +44,7 @@ a {
 }
 a:hover {
   color: #DAE;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -160,6 +159,9 @@ h3 {
   width: 100vw;
   transition: bottom 0.4s ease-in;
 }
+#Landing #Contact p {
+  margin-top: 0;
+}
 @media only screen and (max-resolution: 149dpi) {
   #Landing #Contact {
     display: flex;
@@ -176,6 +178,11 @@ h3 {
     margin: 0.5em 3em;
   }
 }
+@media only screen and (max-resolution: 149dpi) and (max-height: 40em) {
+  #Landing #Contact {
+    display: none;
+  }
+}
 @media only screen and (min-resolution: 150dpi) {
   #Landing #Contact {
     display: flex;
@@ -189,6 +196,11 @@ h3 {
     float: left;
   }
   #Landing #Contact .Type {
+    display: none;
+  }
+}
+@media only screen and (min-resolution: 150dpi) and (orientation: landscape) {
+  #Landing #Contact {
     display: none;
   }
 }
@@ -289,20 +301,15 @@ h3 {
 #Projects #Index .Element.DetailsOff .Badges {
   max-height: 2em;
 }
+#Projects #Index .Element.DetailsOff:hover {
+  cursor: pointer;
+}
 #Projects .Project {
   transition: opacity 0.3s ease;
-  padding: 0.1em 0;
 }
 #Projects .Project .Background {
   background-image: url("img/grid_cell_p.png");
   transition: opacity 0.3s ease;
-}
-#Projects .Project .Content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
 }
 #Projects .Project .Content .ProjectSection {
   text-align: left;
@@ -412,6 +419,7 @@ body {
 }
 
 section {
+  padding: 0.05px;
   position: relative;
   height: 100vh;
   box-sizing: border-box;
