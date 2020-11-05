@@ -1,5 +1,30 @@
+
+button.SquareButton, a.SquareButton {
+  display: block;
+  width: 2em !important;
+  height: 2em !important;
+  padding: 0;
+  margin-bottom: .5em;
+  border-radius: .16em;
+  transition: background .3s ease;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $BgButton;
+  &:hover {
+    background-color: $BgButtonHover;
+  }
+}
+
+.Back {background-image: url('img/buttons/back.png');}
+
+.Back {
+  position: absolute;
+  top: .5em; left: .5em;
+}
+
 button {
-  background: $BgButton;
+  background-color: $BgButton;
   border-radius: .16em;
   border: none;
   color: inherit;
@@ -8,7 +33,7 @@ button {
   padding: .75em 1.5em;
   transition: background .3s ease;
   &:hover {
-    background: $BgButtonHover;
+    background-color: $BgButtonHover;
   }
 }
 
@@ -31,9 +56,6 @@ h3 { font-size: 1.5em; }
 
 [hidden] {
   display: none !important;
-}
-.Hidden {
-  opacity: 0;
 }
 .Clear {
   clear: both;

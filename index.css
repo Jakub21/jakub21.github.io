@@ -1,5 +1,32 @@
+button.SquareButton, a.SquareButton {
+  display: block;
+  width: 2em !important;
+  height: 2em !important;
+  padding: 0;
+  margin-bottom: 0.5em;
+  border-radius: 0.16em;
+  transition: background 0.3s ease;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #CCC3;
+}
+button.SquareButton:hover, a.SquareButton:hover {
+  background-color: #CCC6;
+}
+
+.Back {
+  background-image: url("img/buttons/back.png");
+}
+
+.Back {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+}
+
 button {
-  background: #CCC3;
+  background-color: #CCC3;
   border-radius: 0.16em;
   border: none;
   color: inherit;
@@ -9,7 +36,7 @@ button {
   transition: background 0.3s ease;
 }
 button:hover {
-  background: #CCC6;
+  background-color: #CCC6;
 }
 
 a {
@@ -40,10 +67,6 @@ h3 {
 
 [hidden] {
   display: none !important;
-}
-
-.Hidden {
-  opacity: 0;
 }
 
 .Clear {
@@ -90,6 +113,10 @@ h3 {
 }
 .SlideOut .Content {
   animation: SlideOutToTop 0.5s ease-in;
+}
+
+.Hidden {
+  opacity: 0;
 }
 
 #Landing {
@@ -178,6 +205,13 @@ h3 {
   background-repeat: repeat;
   background-blend-mode: normal;
 }
+#Projects #Index {
+  transition: opacity 0.5s ease;
+  padding: 1em;
+}
+#Projects #Index .Background {
+  background-image: url("img/grid_cell_p.png");
+}
 #Projects #Index .Element {
   text-align: left;
   box-sizing: border-box;
@@ -186,19 +220,31 @@ h3 {
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
+@media only screen and (min-resolution: 150dpi) {
+  #Projects #Index .Element {
+    opacity: 0.75;
+  }
+  @-moz-document url-prefix() {
+    #Projects #Index .Element {
+      border-bottom: 2px solid #666;
+    }
+  }
+}
 #Projects #Index .Element:hover {
   opacity: 1;
 }
-#Projects #Index .Element .Left {
-  float: left;
-  width: calc(100% - 18em);
-}
-#Projects #Index .Element .Name {
-  font-size: 1.2em;
+@media only screen and (max-resolution: 149dpi) {
+  #Projects #Index .Element .Left {
+    float: left;
+    width: calc(100% - 18em);
+  }
 }
 #Projects #Index .Element .Badges {
   float: right;
   transition: max-height 0.75s ease;
+}
+#Projects #Index .Element .Name {
+  font-size: 1.2em;
 }
 #Projects #Index .Element .Badge {
   text-align: right;
@@ -213,12 +259,15 @@ h3 {
   padding: 0 0.5em;
   transition: max-height 0.75s ease;
   overflow: hidden;
-  border-right: 1px solid #ccc3;
+  border-right: 1px solid #CCC3;
 }
 #Projects #Index .Element .Description button {
   margin: 1em auto 0.2em;
   padding: 0.2em 0.5em;
   display: block;
+}
+#Projects #Index .Element.DetailsOn {
+  opacity: 1;
 }
 #Projects #Index .Element.DetailsOn .Description {
   max-height: 10em;
@@ -244,28 +293,100 @@ h3 {
 #Projects #Index .Element.DetailsOff .Badges {
   max-height: 2em;
 }
-#Projects #Index {
-  transition: opacity 0.5s ease;
-  padding: 1em;
-}
-#Projects #Index .Background {
-  background-image: url("img/grid_cell_p.png");
-}
 #Projects .Project {
   transition: opacity 0.5s ease;
-  padding: 1.5em;
+  padding: 0.1em 0;
 }
 #Projects .Project .Background {
-  background-image: url("img/grid_cell_s.png");
+  background-image: url("img/grid_cell_p.png");
 }
-#Projects .Back {
-  padding: 0.5em 0.8em;
-  box-sizing: border-box;
+#Projects .Project .Content {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 1.1em;
-  color: #6CD;
+  width: 100vw;
+  height: 100vh;
+}
+#Projects .Project .Content .ProjectSection {
+  text-align: left;
+  padding-top: 1em;
+  transition: background 0.3s ease;
+}
+@media only screen and (max-resolution: 149dpi) {
+  #Projects .Project .Content .ProjectSection button {
+    padding: 0.2em 0.5em;
+    margin-right: 1em;
+  }
+}
+#Projects .Project .Content .ProjectSection h4, #Projects .Project .Content .ProjectSection p {
+  margin: 1em 0.5em;
+}
+#Projects .Project .Content .ProjectSection h4 {
+  font-size: 1.25em;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader {
+  background-image: linear-gradient(#563F6855, #563F68AA);
+  padding: 1em;
+  border-bottom: 1px solid #6666;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader h2 {
+  text-align: center;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader > div {
+  padding: 0 1em;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader::after {
+  display: none;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader .Links {
+  margin: 0.5em 0;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader .Links a {
+  border-bottom: 1px solid #666;
+  margin-right: 0.75em;
+  border-radius: 0.33em;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader .Links a img {
+  width: 1.5em;
+  height: 1.5em;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader .Links a span {
+  position: relative;
+  bottom: 0.25em;
+}
+#Projects .Project .Content .ProjectSection.ProjectHeader .Links a:hover {
+  opacity: 1;
+  border-color: #888;
+}
+#Projects .Project .Content .ProjectSection::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 75%;
+  margin-top: 1.5em;
+  background-image: linear-gradient(90deg, #6666, #0000);
+}
+#Projects .Project .Content .ProjectSection .Badge {
+  display: inline-block;
+}
+#Projects .Project .Content .ProjectSection .Badge img {
+  width: 1.5em;
+  height: 1.5em;
+}
+#Projects .Project .Content .ProjectSection .Badge::after {
+  margin-left: 0.5em;
+  position: relative;
+  bottom: 0.5em;
+  right: 0.5em;
+  font-size: 0.85em;
+  opacity: 0.4;
+  content: attr(title);
+  display: inline-block;
 }
 
 html, body {
@@ -315,16 +436,6 @@ section .Content {
   text-align: center;
   color: #FFF;
   z-index: 200;
-}
-@media only screen and (max-resolution: 149dpi) and (min-width: 1056px) and (max-width: 1535px) and (max-resolution: 150dpi) {
-  section .Content {
-    max-width: 85%;
-  }
-}
-@media only screen and (max-resolution: 149dpi) and (min-width: 1536px) {
-  section .Content {
-    max-width: 75%;
-  }
 }
 
 .Clear {

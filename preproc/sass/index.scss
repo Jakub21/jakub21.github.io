@@ -49,12 +49,6 @@ section {
     text-align: center;
     color: $FgPrimary;
     z-index: 200;
-    @include breakpoint(lowres standard) {
-      max-width: 85%;
-    }
-    @include breakpoint(lowres wide) {
-      max-width: 75%;
-    }
   }
 }
 
