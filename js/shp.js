@@ -228,7 +228,7 @@ class ShpCompiler {
     this.parser.parse(this.lexer.tokens);
     let temp = $create('div');
     temp.innerHTML = this.builder.build(this.parser.root);
-    return temp.children;
+    return Array.from(temp.children);
   }
 }
 
@@ -242,7 +242,11 @@ class ShpNode {
     this.parent = undefined;
   }
   addParameter(key, value) {
-    this.parameters[key] = value;
+    if (this.parameters[key] == undefined) {
+      this.parameters[key] = value;
+    } else {
+      this.parameters[key] += ' ' + value;
+    }
   }
   appendChild(child) {
     this.children.push(child);
