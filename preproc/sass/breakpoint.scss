@@ -3,6 +3,7 @@
 $HiRes: 150dpi;
 $bptStandard: 1920px * .55;
 $bptWide: 1920px * .8;
+$bptShort: 40em; // height too small to display contact on landing page
 
 // Media queries as mixins based on https://stackoverflow.com/a/49421832
 $mediaQueries : (
@@ -13,6 +14,8 @@ $mediaQueries : (
   'compact': unquote('and (max-width: #{$bptStandard - 1px})'),
   'standard': unquote('and (min-width: #{$bptStandard}) and (max-width: #{$bptWide - 1px}) and (max-resolution: #{$HiRes})'),
   'wide': unquote('and (min-width: #{$bptWide})'),
+  // Screen height
+  'short': unquote('and (max-height: #{$bptShort})'),
   // Screen orientation
   'landscape': unquote('and (orientation: landscape) '),
   'portrait': unquote('and (orientation: portrait) ')

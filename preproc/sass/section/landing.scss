@@ -36,6 +36,7 @@
     margin-bottom: 1em;
     width: 100vw;
     transition: bottom .4s ease-in;
+    p { margin-top: 0; }
     @include breakpoint(lowres) {
       display: flex;
       align-content: center;
@@ -47,6 +48,9 @@
           margin: .5em 3em;
         }
       }
+      @include breakpoint(short) {
+        display: none;
+      }
     }
     @include breakpoint(hires) {
       display: flex;
@@ -54,6 +58,9 @@
       .Container { margin: auto; }
       .Column { color: $FgFaded; float: left; }
       .Type {display: none; }
+      @include breakpoint(landscape) {
+        display: none;
+      }
     }
   }
 }
