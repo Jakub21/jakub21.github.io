@@ -19,7 +19,8 @@ $html {
       $div[.Content] {
         $h1 {Projects Index}
         $p {List of projects I have made over the years.}
-        $button[onclick 'goto("main", "projects")'] {Continue}
+        $button[onclick 'goto("main", "about")'] {About me}
+        $button[onclick 'goto("main", "projects")'] {See my projects}
         $div[#Contact] {
           $div[.Container] {
             $p {Contact me}
@@ -42,6 +43,14 @@ $html {
             $div[.Clear]
           }
         }
+      }
+    }
+    $section[#About] {
+      $div[.Background]
+      $div[.Content] {
+        $button[.Back .SquareButton onclick 'goto("main", "landing");']
+        $h2 {About}
+        $p {Text}
       }
     }
     $section[#Projects] {

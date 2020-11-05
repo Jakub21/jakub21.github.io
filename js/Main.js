@@ -8,6 +8,7 @@ let main = () => {
   switchers.main.setAnimationData({
     leavingCn:'SlideOut', enteringCn:'Hidden', lDelay:500, eDelay:100});
   switchers.main.addSection(new Section('landing', $id('Landing')));
+  switchers.main.addSection(new Section('about', $id('About')));
   switchers.main.addSection(new Section('projects', $id('Projects')));
   switchers.main.goto('landing');
 
