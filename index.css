@@ -432,6 +432,7 @@ section .Background {
   z-index: 100;
 }
 section .Content {
+  padding: 0.05px;
   margin: auto;
   position: relative;
   text-align: center;
