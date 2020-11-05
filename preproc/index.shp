@@ -10,6 +10,7 @@ $html {
     %link[rel stylesheet href 'index.css']
     $script[src 'js/Domi.js']
     $script[src 'js/shp.js']
+    $script[src 'js/Data.js']
     $script[src 'js/Main.js']
   }
   $body[onload 'main()'] {
@@ -18,7 +19,7 @@ $html {
       $div[.Content] {
         $h1 {Projects Index}
         $p {List of projects I have made over the years.}
-        $button[onclick 'goto("Projects")'] {Continue}
+        $button[onclick 'goto("main", "projects")'] {Continue}
         $div[#Contact] {
           $div[.Container] {
             $p {Contact me}
@@ -47,7 +48,7 @@ $html {
       $div[#Index .Project] {
       $div[.Background]
         $div[.Content] {
-          $button[.Back onclick 'goto("Landing");'] {<}
+          $button[.Back .SquareButton onclick 'goto("main", "landing");']
           $h2 {Index}
           $div[#IndexListing]
         }
@@ -55,56 +56,64 @@ $html {
       $div[#Chat .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Web Chat}
+          $div [.ProjectSection .ProjectHeader]
+          $div [.ProjectSection] {
+            $p {Technologies used in the project}
+            $ul {
+              $li {Node.js}
+              $li {MongoDB (mongoose)}
+              $li {express}
+              $li {socket.io}
+            }
+          }
         }
       }
       $div[#Walkers .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Walking Blobs}
+          $div [.ProjectSection .ProjectHeader]
         }
       }
       $div[#Domi .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Domi.js Package}
+          $div [.ProjectSection .ProjectHeader]
         }
       }
       $div[#SHP .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Static HTML Preprocessor}
+          $div [.ProjectSection .ProjectHeader]
         }
       }
       $div[#RoverSoft .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {The Rover Software}
+          $div [.ProjectSection .ProjectHeader]
         }
       }
       $div[#Pluginable .Project] {
       $div[.Background]
         $div[.Content] {
-          $h2 {Pluginable Package}
+          $div [.ProjectSection .ProjectHeader]
         }
       }
       $div[#TkInterWrapper .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {TkInter Wrapper Package}
+          $div [.ProjectSection .ProjectHeader]
         }
       }
       $div[#CIS .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {CIS Protocol}
-          Compact Instruction Sequences
+          $div [.ProjectSection .ProjectHeader]
         }
       }
       $div[#Pathfinder .Project] {
         $div[.Background]
         $div[.Content] {
-          $h2 {Maze Pathfinder}
+          $div [.ProjectSection .ProjectHeader]
         }
       }
     }
