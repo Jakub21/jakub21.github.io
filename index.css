@@ -146,6 +146,9 @@ h3 {
   bottom: 2em;
 }
 #Landing .Background {
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: luminosity;
   background-image: url("img/coding.jpg");
   background-color: #003F7F;
   transition: opacity 0.4s ease-in;
@@ -205,20 +208,17 @@ h3 {
   }
 }
 
-#Projects .Background {
-  background-color: #0500;
-  background-attachment: fixed;
+#About .Background {
+  background-image: url("img/grid_cell_s.png");
   background-size: 3em;
-  background-position: left;
-  background-repeat: repeat;
-  background-blend-mode: normal;
+}
+
+#Projects .Background {
+  background-size: 3em;
 }
 #Projects #Index {
   transition: opacity 0.5s ease;
   padding: 1em;
-}
-#Projects #Index .Background {
-  background-image: url("img/grid_cell_p.png");
 }
 #Projects #Index .Element {
   text-align: left;
@@ -410,14 +410,6 @@ body {
   }
 }
 
-.Background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 section {
   padding: 0.05px;
   position: relative;
@@ -426,10 +418,16 @@ section {
   align-content: center;
 }
 section .Background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0500;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: luminosity;
+  background-position: left;
+  background-repeat: repeat;
+  background-blend-mode: normal;
   filter: blur(0.3em) brightness(60%);
   z-index: 100;
 }

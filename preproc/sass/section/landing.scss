@@ -25,6 +25,9 @@
     bottom: 2em;
   }
   .Background {
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: luminosity;
     background-image: url('img/coding.jpg');
     background-color: $BgPrimary;
     transition: opacity .4s ease-in;

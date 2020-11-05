@@ -1,19 +1,11 @@
 
 #Projects {
   .Background {
-    background-color: #0500;
-    background-attachment: fixed;
     background-size: 3em;
-    background-position: left;
-    background-repeat: repeat;
-    background-blend-mode: normal;
   }
   #Index {
     transition: opacity .5s ease;
     padding: 1em;
-    .Background {
-      background-image: url('img/grid_cell_p.png');
-    }
     .Element {
       text-align: left;
       box-sizing: border-box;
