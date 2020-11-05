@@ -95,15 +95,11 @@
   }
   .Project {
     transition: opacity .3s ease;
-    padding: .1em 0;
     .Background {
       background-image: url('img/grid_cell_p.png');
       transition: opacity .3s ease;
     }
     .Content {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
       .ProjectSection {
         text-align: left;
         padding-top: 1em;

@@ -29,6 +29,7 @@ body {
 }
 
 section {
+  padding: 0.05px; // disable margin collapse
   position: relative;
   height: 100vh;
   box-sizing: border-box;
