@@ -77,7 +77,7 @@ let buildProjectHeader = (compiler, id, project, badgesShp) => {
 
   let header = compiler.compile(headerShp);
   for (let child of header) {
-    project.section.querySelector('.ProjectHeader').appendChild(child);
+    project.section.querySelector('.Header').appendChild(child);
   }
 };
 

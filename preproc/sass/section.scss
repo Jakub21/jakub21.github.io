@@ -1,0 +1,94 @@
+
+section .Content {
+  .Header {
+    text-align: left;
+    padding: 1em;
+    border-bottom: 1px solid #6666;
+    h2 { text-align: center; }
+    &>div {padding: 0 1em;}
+    .Links {
+      margin: .5em 0;
+      a {
+        border-bottom: 1px solid #666;
+        margin-right: .75em;
+        border-radius: .33em;
+        opacity: .6;
+        transition: opacity .3s ease;
+        color: inherit;
+        text-decoration: none;
+        font-size: .85em;
+        img {
+          width: 1.5em;
+          height: 1.5em;
+        }
+        span {
+          position: relative;
+          bottom: .25em;
+        }
+        &:hover {
+          opacity: 1;
+          border-color: #888;
+        }
+      }
+    }
+    .Badge {
+      display: inline-block;
+      img {
+        width: 1.5em; height: 1.5em;
+      }
+      &::after {
+        margin-left: .5em;
+        position: relative;
+        bottom: .5em; right: .5em;
+        font-size: .85em;
+        opacity: .4;
+        content: attr(title);
+        display: inline-block;
+      }
+    }
+  }
+  .TextSection {
+    text-align: left;
+    padding: 1em 1em 0;
+    transition: background .3s ease;
+    @include breakpoint(lowres) { button {
+      padding: .2em .5em;
+      margin-right: 1em;
+    }}
+    h4 {
+      margin: 1em 0;
+      font-size: 1.25em;
+      color: $FgSecondary;
+    }
+    &::after {
+      position: relative;
+      left: -1em; // caused by .TextSection padding
+      display: block;
+      content: "";
+      height: 1px;
+      width: 75%;
+      margin-top: 1.5em;
+      background-image: linear-gradient(90deg, $ElementBorderFaded, #0000);
+    }
+    .Entry {
+      display: inline-block;
+      padding: .5em;
+      background-color: #3338;
+      border-radius: .5em;
+      opacity: .7;
+      transition: opacity .3s ease;
+      &:hover { opacity: 1; }
+      &.Major {
+        background-color: #3334;
+        padding: 1em .5em;
+        opacity: .85;
+        &:hover { opacity: 1; }
+      }
+      .Category {
+        text-align: center;
+        color: $FgPrimary;
+        padding: 0 .5em 1em;
+      }
+    }
+  }
+}

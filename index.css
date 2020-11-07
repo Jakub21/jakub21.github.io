@@ -115,13 +115,117 @@ h3 {
   opacity: 0;
 }
 
+section .Content .Header {
+  text-align: left;
+  padding: 1em;
+  border-bottom: 1px solid #6666;
+}
+section .Content .Header h2 {
+  text-align: center;
+}
+section .Content .Header > div {
+  padding: 0 1em;
+}
+section .Content .Header .Links {
+  margin: 0.5em 0;
+}
+section .Content .Header .Links a {
+  border-bottom: 1px solid #666;
+  margin-right: 0.75em;
+  border-radius: 0.33em;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+section .Content .Header .Links a img {
+  width: 1.5em;
+  height: 1.5em;
+}
+section .Content .Header .Links a span {
+  position: relative;
+  bottom: 0.25em;
+}
+section .Content .Header .Links a:hover {
+  opacity: 1;
+  border-color: #888;
+}
+section .Content .Header .Badge {
+  display: inline-block;
+}
+section .Content .Header .Badge img {
+  width: 1.5em;
+  height: 1.5em;
+}
+section .Content .Header .Badge::after {
+  margin-left: 0.5em;
+  position: relative;
+  bottom: 0.5em;
+  right: 0.5em;
+  font-size: 0.85em;
+  opacity: 0.4;
+  content: attr(title);
+  display: inline-block;
+}
+section .Content .TextSection {
+  text-align: left;
+  padding: 1em 1em 0;
+  transition: background 0.3s ease;
+}
+@media only screen and (max-resolution: 149dpi) {
+  section .Content .TextSection button {
+    padding: 0.2em 0.5em;
+    margin-right: 1em;
+  }
+}
+section .Content .TextSection h4 {
+  margin: 1em 0;
+  font-size: 1.25em;
+  color: #C784FF;
+}
+section .Content .TextSection::after {
+  position: relative;
+  left: -1em;
+  display: block;
+  content: "";
+  height: 1px;
+  width: 75%;
+  margin-top: 1.5em;
+  background-image: linear-gradient(90deg, #6666, #0000);
+}
+section .Content .TextSection .Entry {
+  display: inline-block;
+  padding: 0.5em;
+  background-color: #3338;
+  border-radius: 0.5em;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+section .Content .TextSection .Entry:hover {
+  opacity: 1;
+}
+section .Content .TextSection .Entry.Major {
+  background-color: #3334;
+  padding: 1em 0.5em;
+  opacity: 0.85;
+}
+section .Content .TextSection .Entry.Major:hover {
+  opacity: 1;
+}
+section .Content .TextSection .Entry .Category {
+  text-align: center;
+  color: #84C1FF;
+  padding: 0 0.5em 1em;
+}
+
 #Landing {
   display: flex;
 }
 #Landing h1 {
   position: relative;
   margin-top: 0;
-  margin-bottom: 3em;
+  margin-bottom: 2.5em;
   animation: SlideInFromTop 2s ease;
 }
 @media only screen and (max-resolution: 149dpi) and (max-width: 1055px) {
@@ -142,6 +246,14 @@ h3 {
   margin: 2em;
   animation: SlideInFromBottom 2s ease;
 }
+#Landing button {
+  margin: 2em 1em;
+  border: 2px solid #563F6888;
+  background-color: #563F6888;
+}
+#Landing button:hover {
+  background-color: #775891CC;
+}
 #Landing.SlideOut #Contact {
   bottom: 2em;
 }
@@ -151,6 +263,7 @@ h3 {
   background-blend-mode: luminosity;
   background-image: url("img/coding.jpg");
   background-color: #003F7F;
+  filter: blur(0.3em) brightness(60%);
   transition: opacity 0.4s ease-in;
 }
 #Landing #Contact {
@@ -210,15 +323,25 @@ h3 {
 
 #About .Background {
   background-image: url("img/grid_cell_s.png");
-  background-size: 3em;
+  background-size: 2em;
+  filter: blur(0.15em) brightness(80%);
+}
+#About .Content .Header {
+  background-image: linear-gradient(#3E526655, #3E5266AA);
+  padding: 1em;
 }
 
 #Projects .Background {
-  background-size: 3em;
+  top: -50%;
+  height: 200%;
+  left: -90%;
+  width: 280%;
+  transform: rotate(30deg);
+  background-size: 3.25em;
+  filter: blur(0.125em) brightness(80%);
 }
 #Projects #Index {
   transition: opacity 0.5s ease;
-  padding: 1em;
 }
 #Projects #Index .Element {
   text-align: left;
@@ -311,86 +434,11 @@ h3 {
   background-image: url("img/grid_cell_p.png");
   transition: opacity 0.3s ease;
 }
-#Projects .Project .Content .ProjectSection {
-  text-align: left;
-  padding-top: 1em;
-  transition: background 0.3s ease;
-}
-@media only screen and (max-resolution: 149dpi) {
-  #Projects .Project .Content .ProjectSection button {
-    padding: 0.2em 0.5em;
-    margin-right: 1em;
-  }
-}
-#Projects .Project .Content .ProjectSection h4, #Projects .Project .Content .ProjectSection p {
-  margin: 1em 0.5em;
-}
-#Projects .Project .Content .ProjectSection h4 {
-  font-size: 1.25em;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader {
+#Projects .Project .Content .Header {
   background-image: linear-gradient(#563F6855, #563F68AA);
-  padding: 1em;
-  border-bottom: 1px solid #6666;
 }
-#Projects .Project .Content .ProjectSection.ProjectHeader h2 {
-  text-align: center;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader > div {
-  padding: 0 1em;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader::after {
-  display: none;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader .Links {
-  margin: 0.5em 0;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader .Links a {
-  border-bottom: 1px solid #666;
-  margin-right: 0.75em;
-  border-radius: 0.33em;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  color: inherit;
-  text-decoration: none;
-  font-size: 0.85em;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader .Links a img {
-  width: 1.5em;
-  height: 1.5em;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader .Links a span {
-  position: relative;
-  bottom: 0.25em;
-}
-#Projects .Project .Content .ProjectSection.ProjectHeader .Links a:hover {
-  opacity: 1;
-  border-color: #888;
-}
-#Projects .Project .Content .ProjectSection::after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 75%;
-  margin-top: 1.5em;
-  background-image: linear-gradient(90deg, #6666, #0000);
-}
-#Projects .Project .Content .ProjectSection .Badge {
-  display: inline-block;
-}
-#Projects .Project .Content .ProjectSection .Badge img {
-  width: 1.5em;
-  height: 1.5em;
-}
-#Projects .Project .Content .ProjectSection .Badge::after {
-  margin-left: 0.5em;
-  position: relative;
-  bottom: 0.5em;
-  right: 0.5em;
-  font-size: 0.85em;
-  opacity: 0.4;
-  content: attr(title);
-  display: inline-block;
+#Projects .Project .Content .TextSection h4 {
+  color: #84C1FF;
 }
 
 html, body {
@@ -423,12 +471,11 @@ section .Background {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0500;
+  background-color: #0000;
   background-attachment: fixed;
   background-position: left;
   background-repeat: repeat;
   background-blend-mode: normal;
-  filter: blur(0.3em) brightness(60%);
   z-index: 100;
 }
 section .Content {

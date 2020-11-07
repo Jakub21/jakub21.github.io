@@ -2,6 +2,13 @@
 #About {
   .Background {
     background-image: url('img/grid_cell_s.png');
-    background-size: 3em;
+    background-size: 2em;
+    filter: blur(.15em) brightness(80%);
+  }
+  .Content {
+    .Header {
+      background-image: linear-gradient($BgAboutHeader1, $BgAboutHeader2);
+      padding: 1em;
+    }
   }
 }

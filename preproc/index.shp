@@ -133,8 +133,6 @@ $html {
       $div[#Chat .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
-          $div [.ProjectSection] {
             $p {Technologies used in the project}
             $ul {
               $li {Node.js}
@@ -142,55 +140,57 @@ $html {
               $li {express}
               $li {socket.io}
             }
+          $div [.Header]
+          $div [.TextSection] {
           }
         }
       }
       $div[#Walkers .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
       $div[#Domi .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
       $div[#SHP .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
       $div[#RoverSoft .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
       $div[#Pluginable .Project] {
       $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
       $div[#TkInterWrapper .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
       $div[#CIS .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
       $div[#Pathfinder .Project] {
         $div[.Background]
         $div[.Content] {
-          $div [.ProjectSection .ProjectHeader]
+          $div [.Header]
         }
       }
     }

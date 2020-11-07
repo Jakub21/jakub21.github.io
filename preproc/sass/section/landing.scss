@@ -4,7 +4,7 @@
   h1 {
     position: relative;
     margin-top: 0;
-    margin-bottom: 3em;
+    margin-bottom: 2.5em;
     animation: SlideInFromTop 2s ease;
     @include breakpoint(lowres compact) {
       font-size: 3em;
@@ -21,6 +21,12 @@
     margin: 2em;
     animation: SlideInFromBottom 2s ease;
   }
+  button {
+    margin: 2em 1em;
+    border: 2px solid $BgButtonLanding;
+    background-color: $BgButtonLanding;
+    &:hover { background-color: $BgButtonLandingHover; }
+  }
   &.SlideOut #Contact {
     bottom: 2em;
   }
@@ -30,6 +36,7 @@
     background-blend-mode: luminosity;
     background-image: url('img/coding.jpg');
     background-color: $BgPrimary;
+    filter: blur(.3em) brightness(60%);
     transition: opacity .4s ease-in;
   }
   #Contact {

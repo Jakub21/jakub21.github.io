@@ -1,11 +1,14 @@
 
 #Projects {
   .Background {
-    background-size: 3em;
+    top: -50%; height: 200%; // -sin(deg), 1+2sin(deg)
+    left: -90%; width: 280%; // -cos(deg), 1+2cos(deg)
+    transform: rotate(30deg);
+    background-size: 3.25em;
+    filter: blur(.125em) brightness(80%);
   }
   #Index {
     transition: opacity .5s ease;
-    padding: 1em;
     .Element {
       text-align: left;
       box-sizing: border-box;
@@ -95,76 +98,11 @@
       transition: opacity .3s ease;
     }
     .Content {
-      .ProjectSection {
-        text-align: left;
-        padding-top: 1em;
-        transition: background .3s ease;
-        @include breakpoint(lowres) { button {
-          padding: .2em .5em;
-          margin-right: 1em;
-        }}
-        h4, p {
-          margin: 1em .5em;
-        }
-        h4 {
-          font-size: 1.25em;
-        }
-        &.ProjectHeader {
-          background-image: linear-gradient($BgProjectHeader1, $BgProjectHeader2);
-          padding: 1em;
-          border-bottom: 1px solid #6666;
-          h2 { text-align: center; }
-          &>div {padding: 0 1em;}
-          &::after { display: none; }
-          .Links {
-            margin: .5em 0;
-            a {
-              border-bottom: 1px solid #666;
-              margin-right: .75em;
-              border-radius: .33em;
-              opacity: .6;
-              transition: opacity .3s ease;
-              color: inherit;
-              text-decoration: none;
-              font-size: .85em;
-              img {
-                width: 1.5em;
-                height: 1.5em;
-              }
-              span {
-                position: relative;
-                bottom: .25em;
-              }
-              &:hover {
-                opacity: 1;
-                border-color: #888;
-              }
-            }
-          }
-        }
-        &::after {
-          display: block;
-          content: "";
-          height: 1px;
-          width: 75%;
-          margin-top: 1.5em;
-          background-image: linear-gradient(90deg, #6666, #0000);
-        }
-        .Badge {
-          display: inline-block;
-          img {
-            width: 1.5em; height: 1.5em;
-          }
-          &::after {
-            margin-left: .5em;
-            position: relative;
-            bottom: .5em; right: .5em;
-            font-size: .85em;
-            opacity: .4;
-            content: attr(title);
-            display: inline-block;
-          }
-        }
+      .Header {
+        background-image: linear-gradient($BgProjectHeader1, $BgProjectHeader2);
+      }
+      .TextSection {
+        h4 { color: $FgPrimary; }
       }
     }
   }
