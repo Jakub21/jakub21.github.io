@@ -3,13 +3,13 @@ section .Content {
   .Header {
     text-align: left;
     padding: 1em;
-    border-bottom: 1px solid #6666;
+    border-bottom: 1px solid $ElementBorderFaded;
     h2 { text-align: center; }
     &>div {padding: 0 1em;}
     .Links {
       margin: .5em 0;
       a {
-        border-bottom: 1px solid #666;
+        border-bottom: 1px solid $ElementBorder;
         margin-right: .75em;
         border-radius: .33em;
         opacity: .6;
