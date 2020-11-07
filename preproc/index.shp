@@ -49,8 +49,71 @@ $html {
       $div[.Background]
       $div[.Content] {
         $button[.Back .SquareButton onclick 'goto("main", "landing");']
-        $h2 {About}
-        $p {Text}
+        $div[.Header] {
+          $h2 {About}
+          $div[.Links] {
+            $a[.Email href 'mailto:jakubp2101@gmail.com' target _blank] {
+              $img[src 'img/buttons/email.png']
+              $span {jakubp2101@gmail.com}
+            }
+            $a[.Github href 'https://github.com/Jakub21' target _blank] {
+              $img[src 'img/buttons/github.png']
+              $span {github.com/Jakub21}
+            }
+          }
+        }
+        $div[.TextSection] {
+          $h4 {Languages & technologies}
+          $div[.Entry .Major] {
+            $div[.Category] {Python 3}
+            $div[.Entry] {socket}
+            $div[.Entry] {tkinter}
+            $div[.Entry] {opencv}
+          }
+
+          $div[.Entry .Major] {
+            $div[.Category] {Javascript (ES6)}
+            $div[.Entry] {Node.js}
+            $div[.Entry] {socket.io}
+          }
+          $div[.Entry .Major] {
+            $div[.Category] {HTML 5 + CSS 3}
+            $div[.Entry] {SASS}
+          }
+        }
+        $div[.TextSection] {
+          $h4 {Other Skills}
+          $div[.Entry] {English}
+          $div[.Entry] {Polish}
+          $div[.Entry] {Problem solving}
+          $div[.Entry] {OOP}
+        }
+        $div[.TextSection] {
+          $h4 {My coding history}
+          I started programming as a hobby in my early teens.
+          The first language I learned was C++.
+          It helped me learn the basiscs and sparked interest in the topic. $br
+          
+          In 2017 I tried out Python and soon it became my main programming language.
+          I created many minor projects.
+          That me gain useful knowledge in some branches of programming. $br
+          
+          In 2019 I started learning Javascript.
+          It allowed me develop apps with complex, moderately good looking user interfaces.
+          Because of HTML canvas I got interested in 2D simulators and mini games. $br
+          
+          Over time my focus shifted to single-page apps.
+          Most of my work in 2020 is focused on learning web apps with Node.js backend. $br
+          
+          Because of my model of learning and the way I work on personal projects,
+          most of my repositories are utility packages.
+          My best non-utility projects include WebChat and RoverSoft.
+          To learn more about them see the My Projects section.
+        }
+        $div[.TextSection] {
+          $h4 {Meta}
+          Made in 2020 Q4
+        }
       }
     }
     $section[#Projects] {
