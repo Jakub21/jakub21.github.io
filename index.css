@@ -248,11 +248,10 @@ section .Content .TextSection .Entry .Category {
 }
 #Landing button {
   margin: 2em 1em;
-  border: 2px solid #563F6888;
-  background-color: #563F6888;
+  background-color: #6C4889AA;
 }
 #Landing button:hover {
-  background-color: #775891CC;
+  background-color: #6C4889;
 }
 #Landing.SlideOut #Contact {
   bottom: 2em;
