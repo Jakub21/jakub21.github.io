@@ -112,15 +112,33 @@
       <div id='Chat' class='Project'>
         <div class='Background'></div>
         <div class='Content'>
-            <p>Technologies used in the project</p>
-            <ul>
-              <li>Node.js</li>
-              <li>MongoDB (mongoose)</li>
-              <li>express</li>
-              <li>socket.io</li>
-            </ul>
           <div class='Header'></div>
           <div class='TextSection'>
+            <h4>Tech stack</h4>
+            <div class='Entry'>Node.js</div>
+            <div class='Entry'>MongoDB</div>
+            <div class='Entry'>express</div>
+            <div class='Entry'>socket.io</div>
+          </div>
+          <div class='TextSection'>
+            <h4>What it does</h4>
+            This is a chat application for browsers, both desktop and mobile. Users can create and join rooms to chat in. Room can be opened to the public or protected with a passcode.
+          </div>
+          <div class='TextSection'>
+            <h4>How it works</h4>
+            Node.js runs express app that serves files. Real-time communication is handled by a socket.io server. Users data, rooms settings and chat history is stored on a MongoDB database. User session persistence was achieved with cookies.
+          </div>
+          <div class='TextSection'>
+            <h4>Deployment</h4>
+            There is no project clone running that is available to the public because of lack of free Node.js hosting services. To try out the app please clone the repository and follow instructions in Readme.
+          </div>
+          <div class='TextSection'>
+            <h4>Recent progress</h4>
+            Project was recently refactored. New version uses SASS preprocessor, MongoDB with mongoose.js and has better appearance. Old version utilized text file based database.
+          </div>
+          <div class='TextSection'>
+            <h4>Limitations</h4>
+            Neither socket.io communication or database is encrypted.
           </div>
         </div>
       </div>
