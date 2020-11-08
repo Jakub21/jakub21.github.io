@@ -69,6 +69,10 @@ section .Content {
       width: 75%;
       margin-top: 1.5em;
       background-image: linear-gradient(90deg, $ElementBorderFaded, #0000);
+      @include breakpoint(hires) {
+        height: 2px;
+        width: 100%;
+      }
     }
     .Entry {
       display: inline-block;
