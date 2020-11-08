@@ -6,31 +6,6 @@ section .Content {
     border-bottom: 1px solid $ElementBorderFaded;
     h2 { text-align: center; }
     &>div {padding: 0 1em;}
-    .Links {
-      margin: .5em 0;
-      a {
-        border-bottom: 1px solid $ElementBorder;
-        margin-right: .75em;
-        border-radius: .33em;
-        opacity: .6;
-        transition: opacity .3s ease;
-        color: inherit;
-        text-decoration: none;
-        font-size: .85em;
-        img {
-          width: 1.5em;
-          height: 1.5em;
-        }
-        span {
-          position: relative;
-          bottom: .25em;
-        }
-        &:hover {
-          opacity: 1;
-          border-color: #888;
-        }
-      }
-    }
     .Badge {
       display: inline-block;
       img {
@@ -92,6 +67,31 @@ section .Content {
         text-align: center;
         color: $FgPrimary;
         padding: 0 .5em 1em;
+      }
+    }
+  }
+  .Links {
+    margin: .5em 0;
+    a {
+      border-bottom: 1px solid $ElementBorder;
+      margin-right: .75em;
+      border-radius: .33em;
+      opacity: .6;
+      transition: opacity .3s ease;
+      color: inherit;
+      text-decoration: none;
+      font-size: .85em;
+      img {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      span {
+        position: relative;
+        bottom: .25em;
+      }
+      &:hover {
+        opacity: 1;
+        border-color: #888;
       }
     }
   }
