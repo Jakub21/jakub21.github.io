@@ -24,6 +24,26 @@ let getProjectsData = () => { return {
     links: {
       repo: 'https://github.com/Jakub21/Disk-Chat',
     },
+    screenshots: [
+      { file: 'chat_landing.png',
+        title:'Landing page with login and signup forms.'
+      },
+      { file: 'chat_list.png',
+        title:'Logged in. User can see list of their rooms. In the right-top there is pop-up notification visible.'
+      },
+      { file: 'chat_text_wide.png',
+        title: 'Example chat room on standard screen. Perspective of user "Disk"'
+      },
+      { file: 'chat_text_narrow.png',
+        title: 'Example chat room on narrow screen. Perspective of user "Person3"'
+      },
+      { file : 'chat_join.png',
+        title: 'Join room form.'
+      },
+      { file : 'chat_create.png',
+        title: 'Create room form.'
+      }
+    ],
     desc: 'Room based chat application for browsers. Users can send text, images and react to messages. Rooms can be either opened to public or kept private.',
   },
   walkers: {
