@@ -453,6 +453,52 @@ section .Content .Links a:hover {
 #Projects .Project .Content .TextSection h4 {
   color: #84C1FF;
 }
+#Projects .Project .Content .Screenshot {
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  margin-right: 0.5em;
+  display: inline-block;
+  cursor: zoom-in;
+}
+#Projects .Project .Content .Screenshot img {
+  height: 5em;
+}
+#Projects .Project .Content .Screenshot:hover {
+  opacity: 1;
+}
+#Projects .Project .Content .Screenshot.Active {
+  display: flex;
+  align-content: center;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  width: 100%;
+  height: 100%;
+  margin-right: inherit;
+  background-color: #181818;
+  cursor: zoom-out;
+}
+#Projects .Project .Content .Screenshot.Active::after {
+  color: #84C1FF;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  width: 100%;
+  text-align: center;
+  background-color: #18181888;
+  padding: 1em 0 1.5em;
+  content: attr(title);
+}
+#Projects .Project .Content .Screenshot.Active img {
+  display: block;
+  margin: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
 
 html, body {
   margin: 0;

@@ -1,5 +1,6 @@
 let switchers = {}, detailToggles = {};
 let indexListing;
+let projects, compiler;
 
 let main = () => {
   indexListing = $id('IndexListing');
@@ -18,17 +19,18 @@ let main = () => {
   switchers.project.addSection(new Section('index', $id('Index')));
   switchers.project.goto('index');
 
-  let projects = getProjectsData();
-  let compiler = new ShpCompiler();
+  projects = getProjectsData();
+  compiler = new ShpCompiler();
   for (let [id, project] of Object.entries(projects)) {
-    let badgesShp = getProjectBadgesShp(id, project);
-    buildProjectHeader(compiler, id, project, badgesShp);
-    buildProjectEntry(compiler, id, project, badgesShp);
+    let badgesShp = getBadgesShp(id, project);
+    buildHeader(id, project, badgesShp);
+    buildEntry(id, project, badgesShp);
+    buildLoadScreenshots(id, project);
   }
   indexListing.appendChild(compiler.compile('$div[.Clear]')[0]);
 };
 
-let getProjectBadgesShp = (id, project) => {
+let getBadgesShp = (id, project) => {
   let badgeDescs = getBadgeDescs();
   let badgesShp = ``;
   for (let badgeID of project.badges) {
@@ -39,7 +41,7 @@ let getProjectBadgesShp = (id, project) => {
   return badgesShp;
 };
 
-let buildProjectEntry = (compiler, id, project, badgesShp) => {
+let buildEntry = (id, project, badgesShp) => {
   let entryShp = `
   $div[.Element onclick 'openDetails("${id}");'] {
     $div[.Left] {
@@ -57,7 +59,7 @@ let buildProjectEntry = (compiler, id, project, badgesShp) => {
   detailToggles[id] = toggle;
 };
 
-let buildProjectHeader = (compiler, id, project, badgesShp) => {
+let buildHeader = (id, project, badgesShp) => {
   switchers.project.addSection(new Section(id, project.section));
 
   let linksShp = ``;
@@ -81,6 +83,39 @@ let buildProjectHeader = (compiler, id, project, badgesShp) => {
   }
 };
 
+let buildLoadScreenshots = (id, project) => {
+  let parent = project.section.querySelector('.Screenshots');
+  if (parent == null) return;
+  let shp = `
+  $h4 {Screenshots}
+  $button[onclick 'buildScreenshots("${id}")'] {Load screenshots}
+  `;
+  let dom = compiler.compile(shp);
+  for (let child of dom) {
+    parent.appendChild(child);
+  }
+};
+
+let buildScreenshots = (id) => {
+  let project = projects[id];
+  let parent = project.section.querySelector('.Screenshots');
+  let button = parent.querySelector('button');
+  button.parentNode.removeChild(button);
+  let shp = '';
+  for (let data of project.screenshots) {
+    console.log(data);
+    let {file, title} = data;
+    let domID = `Ss_${id}_${file}`;
+    shp += `$div[#${domID} .Screenshot
+      onclick 'toggleZoom("${domID}")' title '${title}'] {
+        $img[src 'img/screenshots/${id}/${file}']}`;
+  }
+  let dom = compiler.compile(shp);
+  for (let child of dom) {
+    parent.appendChild(child);
+  }
+}
+
 let goto = (switcherID, to) => {
   switchers[switcherID].goto(to);
 }
@@ -91,3 +126,8 @@ let openDetails = (id) => {
   }
   if (id != undefined) detailToggles[id].on();
 };
+
+let toggleZoom = (domID) => {
+  let elm = $id(domID);
+  elm.classList.toggle('Active');
+}
