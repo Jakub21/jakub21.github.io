@@ -1,8 +1,8 @@
 
 #Projects {
   .Background {
-    top: -50%; height: 200%; // -sin(deg), 1+2sin(deg)
-    left: -90%; width: 280%; // -cos(deg), 1+2cos(deg)
+    top: -50vmax; height: 200vmax; // -sin(deg), 1+2sin(deg)
+    left: -90vmax; width: 280vmax; // -cos(deg), 1+2cos(deg)
     transform: rotate(30deg);
     background-size: 3.25em;
     filter: blur(.125em) brightness(80%);
