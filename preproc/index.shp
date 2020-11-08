@@ -112,7 +112,17 @@ $html {
         }
         $div[.TextSection] {
           $h4 {Meta}
-          Made in 2020 Q4
+          $p {Made in 2020 Q4}
+          $p[.Links] { $a[.Github href 'https://github.com/Jakub21/jakub21.github.io' target _blank] {
+            $img[src 'img/buttons/github.png']
+            $span {Project repository}
+          }}
+          $p {External resources}
+          $div {
+            $a[.Entry href 'https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink' target _blank] {Landing page background}
+            $a[.Entry href 'https://github.com/voodootikigod/logo.js' target _blank] {Javascript logo}
+            $a[.Entry href 'https://www.python.org/community/logos/' target _blank] {Python logo}
+          }
         }
       }
     }
