@@ -90,20 +90,20 @@ $html {
         }
         $div[.TextSection] {
           $h4 {My coding history}
-          I started programming as a hobby in my early teens.
+          I started programming as a hobby in my teen years.
           The first language I learned was C++.
           It helped me learn the basiscs and sparked interest in the topic. $br
           
           In 2017 I tried out Python and soon it became my main programming language.
-          I created many minor projects.
-          That me gain useful knowledge in some branches of programming. $br
+          I created many minor projects
+          that made me gain useful knowledge in some branches of programming. $br
           
           In 2019 I started learning Javascript.
           It allowed me develop apps with complex, moderately good looking user interfaces.
           Because of HTML canvas I got interested in 2D simulators and mini games. $br
           
-          Over time my focus shifted to single-page apps.
-          Most of my work in 2020 is focused on learning web apps with Node.js backend. $br
+          Over time my focus shifted to web applications.
+          Most of my work in 2020 is focused learning about Node.js and front-end technologies. $br
           
           Because of my model of learning and the way I work on personal projects,
           most of my repositories are utility packages.
