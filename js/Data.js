@@ -54,10 +54,30 @@ let getProjectsData = () => { return {
     name: 'Walking Blobs',
     section: $id('Walkers'),
     badges: ['app', 'algo', 'js'],
-    links: {},
+    links: {
+      repo: 'https://github.com/Jakub21/Walking-Blobs',
+      host: 'https://jakub21.github.io/Walking-Blobs/',
+    },
     timeline: {
       start: '2020 Q2',
     },
+    screenshots: [
+      { file: 'sim_landing.png',
+        title:'Application just after being loaded.'
+      },
+      { file: 'sim_herbi_chase.png',
+        title:'Herbivore moving to randomly spawned food.'
+      },
+      { file: 'sim_scared.png',
+        title:'Herbivore escaping a predator.'
+      },
+      { file: 'sim_scared_multiple.png',
+        title:'Herbivore escaping multiple predators at once.'
+      },
+      { file: 'sim_carni_chase.png',
+        title:'Carnivore chasing a herbivore.'
+      },
+    ],
     desc: 'Showcase of state-machine based algorithm. Blobs search for food and escape predators.',
   },
   domi: {
