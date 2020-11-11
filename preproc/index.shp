@@ -187,6 +187,33 @@ $html {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
+          $div [.TextSection] {
+            $h4 {What it does}
+            This project was an attempt to build simple AI that would
+            steer blobs towards food and make them avoid predators.
+            User can select blobs to see their stats and what they chase / escape from.
+            On the right hand side there is a bar with stats of the selected blob.
+          }
+          $div [.TextSection] {
+            $h4 {How it works}
+            Blobs have a few "brain states" that they can be in.
+            They include "Hungry-Search", "Hungry-Chase" and "Scared".
+            Each state has a method that evaluates weight of each state
+            based on proximity of food, predators and energy level.
+            Blob will behave according to the algorithm of state with the highest weight.
+          }
+          $div [.TextSection] {
+            $h4 {Deployment}
+            Project is deployed on Github pages.
+          }
+          $div [.TextSection] {
+            $h4 {Limitations}
+            Project is not responsive. Screen is assumed to be 1920x1080.
+            Carnivore blobs have inferior stats, leading to their extinction
+            few minutes after simulation started.
+            Blobs of the same type do not collide and can move into each other.
+          }
+          $div [.TextSection .Screenshots]
         }
       }
       $div[#Domi .Project] {
