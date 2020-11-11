@@ -5,7 +5,10 @@ section .Content {
     padding: 1em;
     border-bottom: 1px solid $ElementBorderFaded;
     h2 { text-align: center; }
-    &>div {padding: 0 1em;}
+    &>div {
+      padding: 0 1em;
+      margin: .33em 0;
+    }
     .Badge {
       display: inline-block;
       img {
@@ -14,7 +17,7 @@ section .Content {
       &::after {
         margin-left: .5em;
         position: relative;
-        bottom: .5em; right: .5em;
+        bottom: .33em; right: .5em;
         font-size: .85em;
         opacity: .4;
         content: attr(title);
