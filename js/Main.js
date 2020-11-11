@@ -62,6 +62,16 @@ let buildEntry = (id, project, badgesShp) => {
 let buildHeader = (id, project, badgesShp) => {
   switchers.project.addSection(new Section(id, project.section));
 
+  let timelineShp = ``;
+  let timeline = project.timeline;
+  if (timeline.latest == undefined) {
+    timelineShp = `Developed in ${timeline.start}`;
+  } else if (timeline.latest == '+') {
+    timelineShp = `Started in ${timeline.start}`;
+  } else {
+    timelineShp = `Started in ${timeline.start}, finished in ${timeline.latest}`;
+  }
+
   let linksShp = ``;
   let linksData = getLinksData();
   for (let [type, href] of Object.entries(project.links)) {
@@ -73,6 +83,8 @@ let buildHeader = (id, project, badgesShp) => {
   let headerShp = `
   $button[.Back .SquareButton onclick 'goto("project", "index")']
   $h2 {${project.name}}
+  $div[.Timeline .Badge title '${timelineShp}'] {
+    $img[src img/date.png] }
   $div[.Badges] {${badgesShp}}
   $div[.Links] {${linksShp}}
   $div[.Description] {${project.desc}}`;

@@ -24,6 +24,10 @@ let getProjectsData = () => { return {
     links: {
       repo: 'https://github.com/Jakub21/Disk-Chat',
     },
+    timeline: {
+      start: '2020 Q1',
+      latest: '+'
+    },
     screenshots: [
       { file: 'chat_landing.png',
         title:'Landing page with login and signup forms.'
@@ -51,6 +55,9 @@ let getProjectsData = () => { return {
     section: $id('Walkers'),
     badges: ['app', 'algo', 'js'],
     links: {},
+    timeline: {
+      start: '2020 Q2',
+    },
     desc: 'Showcase of state-machine based algorithm. Blobs search for food and escape predators.',
   },
   domi: {
@@ -59,6 +66,10 @@ let getProjectsData = () => { return {
     badges: ['util', 'js'],
     links: {
       repo: 'https://github.com/Jakub21/Domi.js',
+    },
+    timeline: {
+      start: '2020 Q2',
+      latest: '+'
     },
     desc: 'Set of classes and aliases for building single page web applications.',
   },
@@ -69,6 +80,10 @@ let getProjectsData = () => { return {
     links: {
       repo: 'https://github.com/Jakub21/Static-Html-Preprocessor',
     },
+    timeline: {
+      start: '2020 Q4',
+      latest: '+'
+    },
     desc: 'HTML Preprocessor for static pages. Javascript version allows dynamic creation of  DOM elements.',
   },
   roverSoft: {
@@ -77,6 +92,10 @@ let getProjectsData = () => { return {
     badges: ['app', 'prog', 'net', 'py'],
     links: {
       repo: 'https://github.com/Jakub21/Rover-Soft',
+    },
+    timeline: {
+      start: '2020 Q1',
+      latest: '2020 Q2'
     },
     desc: 'GUI app made to control a Raspberry Pi powered rover.',
   },
@@ -88,6 +107,10 @@ let getProjectsData = () => { return {
       repo: 'https://github.com/Jakub21/Pluginable',
       docs: 'https://jakub21.github.io/Pluginable/',
     },
+    timeline: {
+      start: '2019 Q3',
+      latest: '2020 Q1'
+    },
     desc: 'Framework for creating modular applications. Utilizes multiprocessing and features event based inter-plugin communication. Primarily designed for the rover project.',
   },
   tkiw: {
@@ -96,6 +119,10 @@ let getProjectsData = () => { return {
     badges: ['util', 'prog', 'py'],
     links: {
       repo: 'https://github.com/Jakub21/Tki-Wrapper',
+    },
+    timeline: {
+      start: '2019 Q2',
+      latest: '2020 Q3'
     },
     desc: 'TkInter wrapper package. Used to build GUI for desktop apps.',
   },
@@ -106,6 +133,9 @@ let getProjectsData = () => { return {
     links: {
       repo: 'https://github.com/Jakub21/Cis-Protocol',
     },
+    timeline: {
+      start: '2019 Q4'
+    },
     desc: 'TCP Communication protocol. Primarily designed for the rover project.',
   },
   pathfinder: {
@@ -114,6 +144,9 @@ let getProjectsData = () => { return {
     badges: ['algo', 'old', 'py'],
     links: {
       repo: 'https://github.com/Jakub21/Maze-Path-Finder',
+    },
+    timeline: {
+      start: '2018 Q2'
     },
     desc: 'Showcase of a pathfinding algorithm.',
   },
