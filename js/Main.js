@@ -115,7 +115,6 @@ let buildScreenshots = (id) => {
   button.parentNode.removeChild(button);
   let shp = '';
   for (let data of project.screenshots) {
-    console.log(data);
     let {file, title} = data;
     let domID = `Ss_${id}_${file}`;
     shp += `$div[#${domID} .Screenshot
