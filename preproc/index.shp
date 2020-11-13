@@ -277,6 +277,22 @@ $html {
             This includes purely front-end projects.
             This website and my Web Chat project were generated with SHP.
           }
+          $div[.TextSection] {
+            $h4 {Notepad++ UDL}
+            In the repository there is an UDL config file.
+            It can be imported to Nodepad++ in order to enable SHP syntax coloring.
+          }
+          $div[.TextSection] {
+            $h4 {Recent progress}
+            Recent changes to the language include '@doctype', '@define' and '@paste' functions.
+            The lexer was improved and now uses states pattern.
+          }
+          $div[.TextSection] {
+            $h4 {Limitations}
+            Because of how the code is parsed 'pre' tags are rendered useless.
+            Single-ticks must be escaped to create apostrophes.
+            Dollar signs can not be used outside the single ticks.
+          }
         }
       }
       $div[#RoverSoft .Project] {
