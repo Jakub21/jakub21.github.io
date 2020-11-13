@@ -251,6 +251,32 @@ $html {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
+          $div[.TextSection] {
+            $h4 {Project Description (Python)}
+            This is simple HTML preprocessor that works independently from the server.
+            SHP syntax is cleaner than HTML due to being based on brackets,
+            rather than tag enclosures.
+            The script can be started with a flag that makes it watch the SHP file for changes.
+          }
+          $div[.TextSection] {
+            $h4 {Project Description (Javascript)}
+            This version uses the same SHP syntax as the Python version but does not support functions.
+            When supplied with valid code, the compiler returns an array of nodes
+              that can be added to the DOM tree.
+          }
+          $div[.TextSection] {
+            $h4 {Why not use other preprocessors}
+            In projects that work with this preprocessor,
+            HTML is compiled before deployment (hence static in the name).
+            I failed to find any other preprocessor of this type.
+            All of them worked with the server and compiled HTML at users request.
+          }
+          $div[.TextSection] {
+            $h4 {Use cases}
+            SHP can be used anywhere where one would normally use plain HTML.
+            This includes purely front-end projects.
+            This website and my Web Chat project were generated with SHP.
+          }
         }
       }
       $div[#RoverSoft .Project] {
