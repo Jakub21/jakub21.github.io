@@ -144,57 +144,57 @@ $html {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Tech stack}
             $div[.Entry] {Node.js}
             $div[.Entry] {MongoDB}
             $div[.Entry] {express}
             $div[.Entry] {socket.io}
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {What it does}
             This is a chat application for browsers, both desktop and mobile.
             Users can create and join rooms to chat in.
             Room can be opened to the public or protected with a passcode.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {How it works}
             Node.js runs express app that serves files.
             Real-time communication is handled by a socket.io server.
             Users data, rooms settings and chat history is stored on a MongoDB database.
             User session persistence was achieved with cookies.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Deployment}
             There is no project clone running that is available to the public because of
             lack of free Node.js hosting services.
             To try out the app please clone the repository and follow instructions in Readme.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Recent progress}
             Project was recently refactored.
             New version uses SASS preprocessor, MongoDB with mongoose.js and has better appearance.
             Old version utilized text file based database.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Limitations}
             Neither socket.io communication or database is encrypted.
           }
-          $div [.TextSection .Screenshots]
+          $div[.TextSection .Screenshots]
         }
       }
       $div[#Walkers .Project] {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {What it does}
             This project was an attempt to build simple AI that would
             steer blobs towards food and make them avoid predators.
             User can select blobs to see their stats and what they chase / escape from.
             On the right hand side there is a bar with stats of the selected blob.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {How it works}
             Blobs have a few "brain states" that they can be in.
             They include "Hungry-Search", "Hungry-Chase" and "Scared".
@@ -202,41 +202,48 @@ $html {
             based on proximity of food, predators and energy level.
             Blob will behave according to the algorithm of state with the highest weight.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Deployment}
             Project is deployed on Github pages.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Limitations}
             Project is not responsive. Screen is assumed to be 1920x1080.
             Carnivore blobs have inferior stats, leading to their extinction
             few minutes after simulation started.
             Blobs of the same type do not collide and can move into each other.
           }
-          $div [.TextSection .Screenshots]
+          $div[.TextSection .Screenshots]
         }
       }
       $div[#Domi .Project] {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Project Description}
-            This is a javascript package for working with the DOM.
-            Mainly, it provides a set of functions for most common actions.
+            This is a Javascript package for working with the DOM.
+            It provides a set of functions for most common actions.
             Some of them are aliases for methods of the "document" object.
             There are also a few utility classes.
-            DomStateToggle class toggles CSS classes in its assigned element and,
-              if configured, can also toggle hidden flag.
+            DomStateToggle class toggles CSS classes in its assigned element and
+              if configured, can also toggle the hidden flag.
             Switcher and AnimatedSwitcher allow switching sections in
-              a single-document application making sure there is only one section
-              visible at a time.
-            Full documentation is available on the Github page.
+              a single-document application making sure there always is only one section
+              visible at the same time.
+            For full documentation visit the Github repository page.
           }
-          $div [.TextSection] {
+          $div[.TextSection] {
             $h4 {Use cases}
             This package is used in some of my web applications.
             Examples include this website and my "Web Chat" project.
+          }
+          $div[.TextSection] {
+            $h4 {Recent progress}
+            Added more DOM mainpulation functions: '$remove' for removing nodes,
+            '$text' for creating text nodes and '$empty' for removing all children from a node.
+            Added an 'AnimatedSwitcher' that delays reveal of the target section and
+            in order to animate, adds temporary CSS classes to an element.
           }
         }
       }
