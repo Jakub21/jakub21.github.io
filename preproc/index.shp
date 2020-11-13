@@ -220,6 +220,24 @@ $html {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
+          $div [.TextSection] {
+            $h4 {Project Description}
+            This is a javascript package for working with the DOM.
+            Mainly, it provides a set of functions for most common actions.
+            Some of them are aliases for methods of the "document" object.
+            There are also a few utility classes.
+            DomStateToggle class toggles CSS classes in its assigned element and,
+              if configured, can also toggle hidden flag.
+            Switcher and AnimatedSwitcher allow switching sections in
+              a single-document application making sure there is only one section
+              visible at a time.
+            Full documentation is available on the Github page.
+          }
+          $div [.TextSection] {
+            $h4 {Use cases}
+            This package is used in some of my web applications.
+            Examples include this website and my "Web Chat" project.
+          }
         }
       }
       $div[#SHP .Project] {
