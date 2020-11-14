@@ -305,6 +305,23 @@ $html {
       $div[.Background]
         $div[.Content] {
           $div [.Header]
+          $div[.TextSection] {
+            $h4 {Project Description}
+            This is a framework for creating modular Python applications.
+            It joins the plugins into a proper multiprocessing program.
+            Each plugin runs in a separate process,
+              which allows for a better performance potential.
+            Plugins can communicate with each other via events system.
+          }
+          $div[.TextSection] {
+            $h4 {Use cases}
+            Thanks to the setup + loop program structure it works well with GUIs and
+            continuous input from the network or sensors.
+          }
+          $div[.TextSection] {
+            $h4 {Limitations}
+            There is quite large start-up overhead caused primarly by the multiprocessing.
+          }
         }
       }
       $div[#TkInterWrapper .Project] {
