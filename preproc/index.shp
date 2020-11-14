@@ -132,12 +132,17 @@ $html {
         $div[.Content] {
           $button[.Back .SquareButton onclick 'goto("main", "landing");']
           $h2 {My projects}
-          $div[.TextSection] {
+          $div[.TextSection .Introduction] {
             This is a list of my personal projects that I find worth sharing
             or showcase some skillset in practice.
             See my Github profile for more.
           }
           $div[#IndexListing]
+          $div[.TextSection .Introduction] {
+            These projects are older but played significant role in my learning process.
+            They were either abandoned, suspended or no longer represent my skill level.
+          }
+          $div[#IndexListingOld]
         }
       }
       $div[#Chat .Project] {

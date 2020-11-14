@@ -9,6 +9,11 @@
   }
   #Index {
     transition: opacity .5s ease;
+    .Introduction {
+      color: $FgPrimary;
+      padding: 2em 1em;
+      &::after { display: none; }
+    }
     .Element {
       text-align: left;
       box-sizing: border-box;
@@ -101,7 +106,8 @@
       .Header {
         background-image: linear-gradient($BgProjectHeader1, $BgProjectHeader2);
       }
-      .Timeline {
+      .BadgeProperty {
+        display: block;
         color: $FgSecondary;
         &::after {
           opacity: 1;

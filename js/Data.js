@@ -7,7 +7,6 @@ let getBadgeDescs = () => { return {
   algo: 'Features algorithms',
   prog: 'Work in progress',
   net: 'Networking project',
-  old: 'This project is old',
 };};
 
 let getLinksData = () => { return {
@@ -21,6 +20,7 @@ let getProjectsData = () => { return {
     name: 'Web Chat',
     section: $id('Chat'),
     badges: ['app', 'net', 'js'],
+    highlight: true,
     links: {
       repo: 'https://github.com/Jakub21/Disk-Chat',
     },
@@ -54,6 +54,7 @@ let getProjectsData = () => { return {
     name: 'Walking Blobs',
     section: $id('Walkers'),
     badges: ['app', 'algo', 'js'],
+    highlight: true,
     links: {
       repo: 'https://github.com/Jakub21/Walking-Blobs',
       host: 'https://jakub21.github.io/Walking-Blobs/',
@@ -84,6 +85,7 @@ let getProjectsData = () => { return {
     name: 'Domi.js Package',
     section: $id('Domi'),
     badges: ['util', 'js'],
+    highlight: true,
     links: {
       repo: 'https://github.com/Jakub21/Domi.js',
     },
@@ -97,6 +99,7 @@ let getProjectsData = () => { return {
     name: 'Static HTML Preprocessor',
     section: $id('SHP'),
     badges: ['util', 'py', 'js'],
+    highlight: true,
     links: {
       repo: 'https://github.com/Jakub21/Static-Html-Preprocessor',
     },
@@ -110,6 +113,7 @@ let getProjectsData = () => { return {
     name: 'The Rover Software',
     section: $id('RoverSoft'),
     badges: ['app', 'prog', 'net', 'py'],
+    highlight: false,
     links: {
       repo: 'https://github.com/Jakub21/Rover-Soft',
     },
@@ -123,6 +127,7 @@ let getProjectsData = () => { return {
     name: 'Pluginable Package',
     section: $id('Pluginable'),
     badges: ['util', 'py'],
+    highlight: false,
     links: {
       repo: 'https://github.com/Jakub21/Pluginable',
       docs: 'https://jakub21.github.io/Pluginable/',
@@ -137,6 +142,7 @@ let getProjectsData = () => { return {
     name: 'TkInter Wrapper Package',
     section: $id('TkInterWrapper'),
     badges: ['util', 'prog', 'py'],
+    highlight: false,
     links: {
       repo: 'https://github.com/Jakub21/Tki-Wrapper',
     },
@@ -150,6 +156,7 @@ let getProjectsData = () => { return {
     name: 'CIS Protocol',
     section: $id('CIS'),
     badges: ['util', 'net', 'py'],
+    highlight: true,
     links: {
       repo: 'https://github.com/Jakub21/Cis-Protocol',
     },
@@ -161,7 +168,8 @@ let getProjectsData = () => { return {
   pathfinder: {
     name: 'Maze Pathfinder',
     section: $id('Pathfinder'),
-    badges: ['algo', 'old', 'py'],
+    badges: ['algo', 'py'],
+    highlight: false,
     links: {
       repo: 'https://github.com/Jakub21/Maze-Path-Finder',
     },

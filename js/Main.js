@@ -1,9 +1,10 @@
 let switchers = {}, detailToggles = {};
-let indexListing;
+let indexListing, indexListingOld;
 let projects, compiler;
 
 let main = () => {
   indexListing = $id('IndexListing');
+  indexListingOld = $id('IndexListingOld');
 
   switchers.main = new AnimatedSwitcher();
   switchers.main.setAnimationData({
@@ -22,9 +23,10 @@ let main = () => {
   projects = getProjectsData();
   compiler = new ShpCompiler();
   for (let [id, project] of Object.entries(projects)) {
+    let listingParent = project.highlight ? indexListing : indexListingOld;
     let badgesShp = getBadgesShp(id, project);
     buildHeader(id, project, badgesShp);
-    buildEntry(id, project, badgesShp);
+    buildEntry(id, project, badgesShp, listingParent);
     buildLoadScreenshots(id, project);
   }
   indexListing.appendChild(compiler.compile('$div[.Clear]')[0]);
@@ -41,7 +43,7 @@ let getBadgesShp = (id, project) => {
   return badgesShp;
 };
 
-let buildEntry = (id, project, badgesShp) => {
+let buildEntry = (id, project, badgesShp, parent) => {
   let entryShp = `
   $div[.Element onclick 'openDetails("${id}");'] {
     $div[.Left] {
@@ -52,7 +54,7 @@ let buildEntry = (id, project, badgesShp) => {
     $div[.Badges] {${badgesShp}}
     $div[.Clear]}`;
   let entry = compiler.compile(entryShp)[0];
-  indexListing.appendChild(entry);
+  parent.appendChild(entry);
 
   let toggle = new DomStateToggle(entry, false, {
     trueClass: 'DetailsOn', falseClass: 'DetailsOff'});
@@ -80,11 +82,21 @@ let buildHeader = (id, project, badgesShp) => {
     $span {${linksData[type].name}}}`;
   }
 
+  let olderShp = ``;
+  if (!project.highlight) {
+    olderShp = `
+    $div[.Badge .BadgeProperty title 'This project is old'] {
+      $img[src img/old.png]
+    }
+    `;
+  }
+
   let headerShp = `
   $button[.Back .SquareButton onclick 'goto("project", "index")']
   $h2 {${project.name}}
-  $div[.Timeline .Badge title '${timelineShp}'] {
+  $div[.BadgeProperty .Badge title '${timelineShp}'] {
     $img[src img/date.png] }
+  ${olderShp}
   $div[.Badges] {${badgesShp}}
   $div[.Links] {${linksShp}}
   $div[.Description] {${project.desc}}`;
