@@ -351,8 +351,8 @@ section .Content .Links a:hover {
   left: -90vmax;
   width: 280vmax;
   transform: rotate(30deg);
-  background-size: 3.25em;
-  filter: blur(0.125em) brightness(80%);
+  background-size: 12em;
+  filter: blur(0.4em) brightness(70%);
 }
 #Projects #Index {
   transition: opacity 0.5s ease;

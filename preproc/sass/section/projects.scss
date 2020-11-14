@@ -4,8 +4,8 @@
     top: -50vmax; height: 200vmax; // -sin(deg), 1+2sin(deg)
     left: -90vmax; width: 280vmax; // -cos(deg), 1+2cos(deg)
     transform: rotate(30deg);
-    background-size: 3.25em;
-    filter: blur(.125em) brightness(80%);
+    background-size: 12em;
+    filter: blur(.4em) brightness(70%);
   }
   #Index {
     transition: opacity .5s ease;
