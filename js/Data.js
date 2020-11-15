@@ -134,6 +134,20 @@ let getProjectsData = () => { return {
       start: '2020 Q1',
       latest: '2020 Q2'
     },
+    screenshots: [
+      { file: 'landing.png',
+        title: 'Application just after being loaded.'
+      },
+      { file: 'terminals.png',
+        title:'Terminals running two programs on the same machine and controller GUI with hidden sidebar.'
+      },
+      { file: 'pad1.png',
+        title:'Correct readout of the gamepad state (hat)'
+      },
+      { file: 'pad2.png',
+        title:'Correct readout of the gamepad state (button and axis)'
+      },
+    ],
     desc: 'GUI app made to control a Raspberry Pi powered rover.',
   },
   pluginable: {

@@ -330,6 +330,27 @@ $html {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
+          $div[.TextSection] {
+            $h4 {Tech stack}
+            $div[.Entry] {tkinter}
+            $div[.Entry] {socket}
+            $div[.Entry] {serial}
+            $div[.Entry] {opencv}
+            $div[.Entry] {pygame}
+          }
+          $div[.TextSection] {
+            $h4 {What it does}
+            This is a project with two desktop applications.
+            Controller variant with a GUI sends gamepad data and displays camera feed.
+            Rover variant parses and redirects gamepad data to the Arduino board
+            and sends camera feed to the controller.
+          }
+          $div[.TextSection] {
+            $h4 {Deployment}
+            This is a prototype and was not tested on the rover
+              because the construction was delayed.
+          }
+          $div[.TextSection .Screenshots]
         }
       }
       $div[#Pluginable .Project] {
