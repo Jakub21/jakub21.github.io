@@ -120,7 +120,7 @@ let getProjectsData = () => { return {
     timeline: {
       start: '2019 Q4'
     },
-    desc: 'TCP Communication protocol. Primarily designed for the rover project.',
+    desc: 'Communication protocol. Primarily designed for the rover project.',
   },
   roverSoft: {
     name: 'The Rover Software',
