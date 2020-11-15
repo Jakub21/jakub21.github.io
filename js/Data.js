@@ -175,7 +175,7 @@ let getProjectsData = () => { return {
     },
     timeline: {
       start: '2019 Q2',
-      latest: '2020 Q3'
+      latest: '+'
     },
     desc: 'TkInter wrapper package. Used to build GUI for desktop apps.',
   },
