@@ -190,6 +190,11 @@ let getProjectsData = () => { return {
     timeline: {
       start: '2018 Q2'
     },
+    screenshots: [
+      { file: 'path_rand.png',
+        title: 'Random 70x70 maze with a path from (10,10) to (60,60). It took 53s to complete.'
+      },
+    ],
     desc: 'Showcase of a pathfinding algorithm.',
   },
 };};
