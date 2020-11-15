@@ -109,6 +109,19 @@ let getProjectsData = () => { return {
     },
     desc: 'HTML Preprocessor for static pages. Javascript version allows dynamic creation of  DOM elements.',
   },
+  cis: {
+    name: 'CIS Protocol',
+    section: $id('CIS'),
+    badges: ['util', 'net', 'py'],
+    highlight: true,
+    links: {
+      repo: 'https://github.com/Jakub21/Cis-Protocol',
+    },
+    timeline: {
+      start: '2019 Q4'
+    },
+    desc: 'TCP Communication protocol. Primarily designed for the rover project.',
+  },
   roverSoft: {
     name: 'The Rover Software',
     section: $id('RoverSoft'),
@@ -151,19 +164,6 @@ let getProjectsData = () => { return {
       latest: '2020 Q3'
     },
     desc: 'TkInter wrapper package. Used to build GUI for desktop apps.',
-  },
-  cis: {
-    name: 'CIS Protocol',
-    section: $id('CIS'),
-    badges: ['util', 'net', 'py'],
-    highlight: true,
-    links: {
-      repo: 'https://github.com/Jakub21/Cis-Protocol',
-    },
-    timeline: {
-      start: '2019 Q4'
-    },
-    desc: 'TCP Communication protocol. Primarily designed for the rover project.',
   },
   pathfinder: {
     name: 'Maze Pathfinder',

@@ -300,6 +300,12 @@ $html {
           }
         }
       }
+      $div[#CIS .Project] {
+        $div[.Background]
+        $div[.Content] {
+          $div [.Header]
+        }
+      }
       $div[#RoverSoft .Project] {
         $div[.Background]
         $div[.Content] {
@@ -330,12 +336,6 @@ $html {
         }
       }
       $div[#TkInterWrapper .Project] {
-        $div[.Background]
-        $div[.Content] {
-          $div [.Header]
-        }
-      }
-      $div[#CIS .Project] {
         $div[.Background]
         $div[.Content] {
           $div [.Header]
