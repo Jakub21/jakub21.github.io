@@ -50,8 +50,13 @@ $html {
       $div[.Content] {
         $button[.Back .SquareButton onclick 'goto("main", "landing");']
         $div[.Header] {
-          $h2 {About}
+          $h2 {About me}
+          $div[.BadgeProperty .LargeText title 'Jakub Przybylski']
           $div[.Links] {
+            $a[.Phone href 'tel:+48601937315'] {
+              $img[src 'img/buttons/phone.png']
+              $span {+48601937315}
+            }
             $a[.Email href 'mailto:jakubp2101@gmail.com' target _blank] {
               $img[src 'img/buttons/email.png']
               $span {jakubp2101@gmail.com}
@@ -122,6 +127,7 @@ $html {
             $a[.Entry href 'https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink' target _blank] {Landing page background}
             $a[.Entry href 'https://github.com/voodootikigod/logo.js' target _blank] {Javascript logo}
             $a[.Entry href 'https://www.python.org/community/logos/' target _blank] {Python logo}
+            $a[.Entry href 'https://www.flaticon.com/authors/freepik' target _blank] {Phone icon}
           }
         }
       }
