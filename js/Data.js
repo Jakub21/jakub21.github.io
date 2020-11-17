@@ -23,6 +23,7 @@ let getProjectsData = () => { return {
     highlight: true,
     links: {
       repo: 'https://github.com/Jakub21/Disk-Chat',
+      host: 'https://disken-chat.herokuapp.com/',
     },
     timeline: {
       start: '2020 Q1',
