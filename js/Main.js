@@ -85,7 +85,7 @@ let buildHeader = (id, project, badgesShp) => {
   let olderShp = ``;
   if (!project.highlight) {
     olderShp = `
-    $div[.Badge .BadgeProperty title 'This project is old'] {
+    $div[.BadgeProperty title 'This project is old'] {
       $img[src img/old.png]
     }
     `;
@@ -94,7 +94,7 @@ let buildHeader = (id, project, badgesShp) => {
   let headerShp = `
   $button[.Back .SquareButton onclick 'goto("project", "index")']
   $h2 {${project.name}}
-  $div[.BadgeProperty .Badge title '${timelineShp}'] {
+  $div[.BadgeProperty title '${timelineShp}'] {
     $img[src img/date.png] }
   ${olderShp}
   $div[.Badges] {${badgesShp}}
