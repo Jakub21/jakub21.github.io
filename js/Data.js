@@ -11,7 +11,7 @@ let getBadgeDescs = () => { return {
 
 let getLinksData = () => { return {
   repo: {name:'Repository', icon:'img/buttons/github.png'},
-  host: {name:'Hosted project', icon:'img/buttons/hosted.png'},
+  host: {name:'Deployed', icon:'img/buttons/hosted.png'},
   docs: {name:'Documentation', icon:'img/buttons/docs.png'},
 };};
 
