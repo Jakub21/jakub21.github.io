@@ -106,13 +106,6 @@
       .Header {
         background-image: linear-gradient($BgProjectHeader1, $BgProjectHeader2);
       }
-      .BadgeProperty {
-        display: block;
-        color: $FgSecondary;
-        &::after {
-          opacity: 1;
-        }
-      }
       .TextSection {
         h4 { color: $FgPrimary; }
       }

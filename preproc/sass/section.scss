@@ -24,6 +24,24 @@ section .Content {
         display: inline-block;
       }
     }
+    .BadgeProperty {
+      display: block;
+      color: $FgSecondary;
+      img {
+        width: 1.5em; height: 1.5em;
+      }
+      &.LargeText {
+        &::after { font-size: 1.1em; }
+      }
+      &::after {
+        margin-left: .5em;
+        position: relative;
+        bottom: .33em; right: .5em;
+        font-size: .85em;
+        content: attr(title);
+        display: inline-block;
+      }
+    }
   }
   .TextSection {
     text-align: left;
@@ -55,13 +73,13 @@ section .Content {
     .Entry {
       display: inline-block;
       padding: .5em;
-      background-color: #3338;
+      background-color: #6666;
       border-radius: .5em;
-      opacity: .7;
+      opacity: .8;
       transition: opacity .3s ease;
       &:hover { opacity: 1; }
       &.Major {
-        background-color: #3334;
+        background-color: #6666;
         padding: 1em .5em;
         opacity: .85;
         &:hover { opacity: 1; }
