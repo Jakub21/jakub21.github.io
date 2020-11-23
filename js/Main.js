@@ -29,7 +29,6 @@ let main = () => {
     buildEntry(id, project, badgesShp, listingParent);
     buildLoadScreenshots(id, project);
   }
-  indexListing.appendChild(compiler.compile('$div[.Clear]')[0]);
 };
 
 let getBadgesShp = (id, project) => {

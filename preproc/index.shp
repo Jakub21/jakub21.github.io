@@ -20,7 +20,7 @@ $html {
         $h1 {Projects Index}
         $p {List of projects I have made over the years.}
         $button[onclick 'goto("main", "about")'] {About me}
-        $button[onclick 'goto("main", "projects")'] {See my projects}
+        $button[onclick 'goto("main", "projects")'] {My projects}
         $div[#Contact] {
           $div[.Container] {
             $p {Contact me}
@@ -92,6 +92,7 @@ $html {
           $div[.Entry] {Polish}
           $div[.Entry] {Problem solving}
           $div[.Entry] {OOP}
+          $div[.Entry] {Git}
         }
         $div[.TextSection] {
           $h4 {My coding history}
