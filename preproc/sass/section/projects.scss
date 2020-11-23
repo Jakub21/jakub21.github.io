@@ -5,28 +5,26 @@
     left: -90vmax; width: 280vmax; // -cos(deg), 1+2cos(deg)
     transform: rotate(30deg);
     background-size: 12em;
-    filter: blur(.4em) brightness(70%);
+    filter: blur(.4em) saturate(70%);
   }
   #Index {
     transition: opacity .5s ease;
+    padding-bottom: 5em;
     .Introduction {
       color: $FgPrimary;
       padding: 2em 1em;
+      width: 90%;
+      margin: 0 auto;
       &::after { display: none; }
     }
     .Element {
+      width: 90%;
       text-align: left;
       box-sizing: border-box;
-      border-bottom: 1px solid $ElementBorder;
-      @include breakpoint(hires) {
-        // only on mobile firefox, required because some lines are not rendered
-        @-moz-document url-prefix() {
-          border-bottom: 2px solid $ElementBorder;
-        }
-        opacity: .75;
-      }
       padding: 1em .5em;
-      opacity: .6;
+      margin: .5em auto;
+      background-color: $BgIndexElement;
+      opacity: .8;
       transition: opacity .3s ease;
       &:hover {
         opacity: 1;
@@ -43,6 +41,8 @@
       }
       .Name {
         font-size: 1.2em;
+        transition: all .3s ease;
+        transition-property: color, padding, letter-spacing;
       }
       .Badge {
         text-align: right;
@@ -53,20 +53,27 @@
         }
       }
       .Description {
-        padding: 0 .5em;
+        padding: 0 1em 0 .5em;
         transition: max-height .75s ease;
         overflow: hidden;
         border-right: 1px solid $BgButton;
         button {
           margin: 1em auto .2em;
-          padding: .2em .5em;
+          padding: .33em 1em;
           display: block;
+          background-color: $BgProjectHeader1;
+          &:hover { background-color: $BgProjectHeader2; }
         }
       }
       &.DetailsOn {
         opacity: 1;
+        .Name {
+          color: $FgSecondary;
+          padding: 0 .5em;
+          letter-spacing: .055em;
+        }
         .Description {
-          max-height: 10em; // NOTE: auto does not work
+          max-height: 15em; // NOTE: auto does not work
         }
         .Badges {
           max-height: 8em;
@@ -77,7 +84,7 @@
             position: relative;
             bottom: .5em; right: .5em;
             font-size: .85em;
-            opacity: .4;
+            opacity: .7;
             content: attr(title);
             display: inline-block;
           }

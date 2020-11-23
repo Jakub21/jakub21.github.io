@@ -372,35 +372,30 @@ section .Content .Links a:hover {
   width: 280vmax;
   transform: rotate(30deg);
   background-size: 12em;
-  filter: blur(0.4em) brightness(70%);
+  filter: blur(0.4em) saturate(70%);
 }
 #Projects #Index {
   transition: opacity 0.5s ease;
+  padding-bottom: 5em;
 }
 #Projects #Index .Introduction {
   color: #84C1FF;
   padding: 2em 1em;
+  width: 90%;
+  margin: 0 auto;
 }
 #Projects #Index .Introduction::after {
   display: none;
 }
 #Projects #Index .Element {
+  width: 90%;
   text-align: left;
   box-sizing: border-box;
-  border-bottom: 1px solid #666;
   padding: 1em 0.5em;
-  opacity: 0.6;
+  margin: 0.5em auto;
+  background-color: #6665;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
-}
-@media only screen and (min-resolution: 150dpi) {
-  #Projects #Index .Element {
-    opacity: 0.75;
-  }
-  @-moz-document url-prefix() {
-    #Projects #Index .Element {
-      border-bottom: 2px solid #666;
-    }
-  }
 }
 #Projects #Index .Element:hover {
   opacity: 1;
@@ -417,6 +412,8 @@ section .Content .Links a:hover {
 }
 #Projects #Index .Element .Name {
   font-size: 1.2em;
+  transition: all 0.3s ease;
+  transition-property: color, padding, letter-spacing;
 }
 #Projects #Index .Element .Badge {
   text-align: right;
@@ -428,21 +425,30 @@ section .Content .Links a:hover {
   height: 1.5em;
 }
 #Projects #Index .Element .Description {
-  padding: 0 0.5em;
+  padding: 0 1em 0 0.5em;
   transition: max-height 0.75s ease;
   overflow: hidden;
   border-right: 1px solid #CCC3;
 }
 #Projects #Index .Element .Description button {
   margin: 1em auto 0.2em;
-  padding: 0.2em 0.5em;
+  padding: 0.33em 1em;
   display: block;
+  background-color: #563F6855;
+}
+#Projects #Index .Element .Description button:hover {
+  background-color: #563F68AA;
 }
 #Projects #Index .Element.DetailsOn {
   opacity: 1;
 }
+#Projects #Index .Element.DetailsOn .Name {
+  color: #C784FF;
+  padding: 0 0.5em;
+  letter-spacing: 0.055em;
+}
 #Projects #Index .Element.DetailsOn .Description {
-  max-height: 10em;
+  max-height: 15em;
 }
 #Projects #Index .Element.DetailsOn .Badges {
   max-height: 8em;
@@ -455,7 +461,7 @@ section .Content .Links a:hover {
   bottom: 0.5em;
   right: 0.5em;
   font-size: 0.85em;
-  opacity: 0.4;
+  opacity: 0.7;
   content: attr(title);
   display: inline-block;
 }
