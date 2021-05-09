@@ -280,6 +280,16 @@ section .Content .Links a:hover {
 #Landing button:hover {
   background-color: #6C4889;
 }
+@media only screen and (max-resolution: 149dpi) {
+  #Landing button {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-resolution: 150dpi) {
+  #Landing button {
+    font-size: 1.1em;
+  }
+}
 #Landing.SlideOut #Contact {
   bottom: 2em;
 }

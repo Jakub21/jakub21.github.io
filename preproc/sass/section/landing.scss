@@ -25,6 +25,12 @@
     margin: 2em 1em;
     background-color: $BgButtonLanding;
     &:hover { background-color: $BgButtonLandingHover; }
+    @include breakpoint(lowres) {
+      font-size: 1.1rem;
+    }
+    @include breakpoint(hires) {
+      font-size: 1.1em;
+    }
   }
   &.SlideOut #Contact {
     bottom: 2em;
