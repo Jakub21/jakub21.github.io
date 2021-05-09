@@ -151,14 +151,14 @@ let getProjectsData = () => { return {
     ],
     desc: 'GUI app made to control a Raspberry Pi powered rover.',
   },
-  pluginable: {
-    name: 'Pluginable Package',
-    section: $id('Pluginable'),
+  mpplugs: {
+    name: 'MPPlugs Package',
+    section: $id('MpPlugs'),
     badges: ['util', 'py'],
     highlight: false,
     links: {
-      repo: 'https://github.com/Jakub21/Pluginable',
-      docs: 'https://jakub21.github.io/Pluginable/',
+      repo: 'https://github.com/Jakub21/mpplugs',
+      docs: 'https://jakub21.github.io/mpplugs/',
     },
     timeline: {
       start: '2019 Q3',

@@ -359,7 +359,7 @@ $html {
           $div[.TextSection .Screenshots]
         }
       }
-      $div[#Pluginable .Project] {
+      $div[#MpPlugs .Project] {
       $div[.Background]
         $div[.Content] {
           $div [.Header]
