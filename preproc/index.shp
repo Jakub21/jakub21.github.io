@@ -103,7 +103,7 @@ $html {
           $h4 {My coding history}
           I started programming as a hobby in my teen years.
           The first language I learned was C++.
-          It helped me learn the basiscs and sparked interest in the topic. $br
+          It helped me learn the basics and sparked interest in the topic. $br
           
           In 2017 I tried out Python and soon it became my main programming language.
           I created many minor projects
@@ -177,7 +177,7 @@ $html {
           }
           $div[.TextSection] {
             $h4 {How it works}
-            Node.js runs express app that serves files.
+            Node.js runs an Express.js application that serves client files to the user.
             Real-time communication is handled by a socket.io server.
             Users data, rooms settings and chat history is stored on a MongoDB database.
             User session persistence was achieved with cookies.
