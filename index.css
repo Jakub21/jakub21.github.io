@@ -200,9 +200,10 @@ section .Content .TextSection .Entry {
   display: inline-block;
   padding: 0.5em;
   background-color: #6666;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
   opacity: 0.8;
   transition: opacity 0.3s ease;
+  margin-bottom: 0.25em;
 }
 section .Content .TextSection .Entry:hover {
   opacity: 1;
