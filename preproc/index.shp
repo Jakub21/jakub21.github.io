@@ -55,7 +55,7 @@ $html {
           $div[.Links] {
             $a[.Phone href 'tel:+48601937315'] {
               $img[src 'img/buttons/phone.png']
-              $span {+48601937315}
+              $span {+48 601937315}
             }
             $a[.Email href 'mailto:jakubp2101@gmail.com' target _blank] {
               $img[src 'img/buttons/email.png']
@@ -68,7 +68,7 @@ $html {
           }
         }
         $div[.TextSection] {
-          $h4 {Languages & technologies}
+          $h4 {Technologies}
           $div[.Entry .Major] {
             $div[.Category] {Python 3}
             $div[.Entry] {socket}
@@ -83,16 +83,21 @@ $html {
           }
           $div[.Entry .Major] {
             $div[.Category] {HTML 5 + CSS 3}
-            $div[.Entry] {SASS}
+            $div[.Entry] {SCSS}
           }
         }
         $div[.TextSection] {
           $h4 {Other Skills}
-          $div[.Entry] {English}
-          $div[.Entry] {Polish}
-          $div[.Entry] {Problem solving}
+          $div[.Entry] {RWD}
           $div[.Entry] {OOP}
           $div[.Entry] {Git}
+          $div[.Entry] {GitHub}
+          $div[.Entry] {Problem solving}
+        }
+        $div[.TextSection] {
+          $h4 {Spoken languages}
+          $div[.Entry] {Polish (Native)}
+          $div[.Entry] {English}
         }
         $div[.TextSection] {
           $h4 {My coding history}
@@ -105,11 +110,11 @@ $html {
           that made me gain useful knowledge in some branches of programming. $br
           
           In 2019 I started learning Javascript.
-          It allowed me develop apps with complex, moderately good looking user interfaces.
-          Because of HTML canvas I got interested in 2D simulators and mini games. $br
+          It allowed me develop apps with complex, somewhat good looking user interfaces.
+          The HTML canvas got me interested in 2D simulators and mini games. $br
           
           Over time my focus shifted to web applications.
-          Most of my work in 2020 is focused learning about Node.js and front-end technologies. $br
+          In 2020 I focused mainly on Node.js and front-end technologies. $br
           
           Because of my model of learning and the way I work on personal projects,
           most of my repositories are utility packages.
@@ -128,6 +133,7 @@ $html {
             $a[.Entry href 'https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink' target _blank] {Landing page background}
             $a[.Entry href 'https://github.com/voodootikigod/logo.js' target _blank] {Javascript logo}
             $a[.Entry href 'https://www.python.org/community/logos/' target _blank] {Python logo}
+            $a[.Entry href 'https://github.com/logos' target _blank] {Github logo}
             $a[.Entry href 'https://www.flaticon.com/authors/freepik' target _blank] {Phone icon}
           }
         }
