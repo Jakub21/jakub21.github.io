@@ -16,16 +16,20 @@ button.SquareButton:hover, a.SquareButton:hover {
 }
 
 .Back {
-  background-image: url("img/buttons/back.png");
   position: absolute;
   top: 0.5em;
   left: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #6C4889AA;
+}
+.Back:hover {
+  background-color: #6C4889;
 }
 
 button {
-  background-color: #CCC3;
-  border-radius: 0.16em;
+  background: none;
   border: none;
+  border-bottom: 2px solid #CCC3;
   color: inherit;
   letter-spacing: inherit;
   font-size: inherit;
@@ -48,8 +52,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  font-family: "Montserrat";
+  font-weight: 100;
 }
 
 h1 {
@@ -146,7 +149,7 @@ section .Content .Header .Badge::after {
 }
 section .Content .Header .BadgeProperty {
   display: block;
-  color: #C784FF;
+  color: #A17FFF;
 }
 section .Content .Header .BadgeProperty img {
   width: 1.5em;
@@ -178,7 +181,7 @@ section .Content .TextSection {
 section .Content .TextSection h4 {
   margin: 1em 0;
   font-size: 1.25em;
-  color: #C784FF;
+  color: #FF7FBF;
 }
 section .Content .TextSection::after {
   position: relative;
@@ -200,7 +203,6 @@ section .Content .TextSection .Entry {
   display: inline-block;
   padding: 0.5em;
   background-color: #6666;
-  border-radius: 0.25em;
   opacity: 0.8;
   transition: opacity 0.3s ease;
   margin-bottom: 0.25em;
@@ -218,8 +220,7 @@ section .Content .TextSection .Entry.Major:hover {
 }
 section .Content .TextSection .Entry .Category {
   text-align: center;
-  color: #84C1FF;
-  padding: 0 0.5em 1em;
+  color: #A17FFF;
 }
 section .Content .Links {
   margin: 0.5em 0;
@@ -245,6 +246,12 @@ section .Content .Links a span {
 section .Content .Links a:hover {
   opacity: 1;
   border-color: #888;
+}
+section .Content .Links a.Colored {
+  color: #B8C;
+}
+section .Content .Links a.Colored:hover {
+  color: #DAE;
 }
 
 #Landing {
@@ -277,6 +284,7 @@ section .Content .Links a:hover {
 #Landing button {
   margin: 2em 1em;
   background-color: #6C4889AA;
+  border-bottom: 2px solid #6C4889AA;
 }
 #Landing button:hover {
   background-color: #6C4889;
@@ -297,10 +305,9 @@ section .Content .Links a:hover {
 #Landing .Background {
   background-size: cover;
   background-position: center;
-  background-blend-mode: luminosity;
+  background-blend-mode: color;
   background-image: url("img/coding.jpg");
-  background-color: #003F7F;
-  filter: blur(0.3em) brightness(60%);
+  filter: blur(0.3em) saturate(0.1) brightness(0.5);
   transition: opacity 0.4s ease-in;
 }
 #Landing #Contact {
@@ -358,39 +365,17 @@ section .Content .Links a:hover {
   }
 }
 
-#About .Background {
-  background-image: url("img/grid_cell_s.png");
-  background-size: 2em;
-  filter: blur(0.15em) brightness(80%);
-}
-@media only screen and (min-resolution: 150dpi) {
-  #About .Background {
-    filter: blur(0.125em) brightness(150%);
-  }
-}
 #About .Content .Header {
-  background-image: linear-gradient(#3E526655, #3E5266AA);
+  background-image: linear-gradient(#59002C55, #59002CAA);
   padding: 1em;
 }
-#About .Content .Entry {
-  text-decoration: none;
-}
 
-#Projects .Background {
-  top: -50vmax;
-  height: 200vmax;
-  left: -90vmax;
-  width: 280vmax;
-  transform: rotate(30deg);
-  background-size: 12em;
-  filter: blur(0.4em) saturate(70%);
-}
 #Projects #Index {
   transition: opacity 0.5s ease;
   padding-bottom: 5em;
 }
 #Projects #Index .Introduction {
-  color: #84C1FF;
+  color: #FF7FBF;
   padding: 2em 1em;
   width: 90%;
   margin: 0 auto;
@@ -445,16 +430,16 @@ section .Content .Links a:hover {
   margin: 1em auto 0.2em;
   padding: 0.33em 1em;
   display: block;
-  background-color: #563F6855;
+  background-color: #59002C55;
 }
 #Projects #Index .Element .Description button:hover {
-  background-color: #563F68AA;
+  background-color: #59002CAA;
 }
 #Projects #Index .Element.DetailsOn {
   opacity: 1;
 }
 #Projects #Index .Element.DetailsOn .Name {
-  color: #C784FF;
+  color: #A17FFF;
   padding: 0 0.5em;
   letter-spacing: 0.055em;
 }
@@ -489,14 +474,10 @@ section .Content .Links a:hover {
   transition: opacity 0.3s ease;
 }
 #Projects .Project .Background {
-  background-image: url("img/grid_cell_p.png");
   transition: opacity 0.3s ease;
 }
 #Projects .Project .Content .Header {
-  background-image: linear-gradient(#563F6855, #563F68AA);
-}
-#Projects .Project .Content .TextSection h4 {
-  color: #84C1FF;
+  background-image: linear-gradient(#59002C55, #59002CAA);
 }
 #Projects .Project .Content .Screenshot {
   opacity: 0.85;
@@ -526,7 +507,7 @@ section .Content .Links a:hover {
   cursor: zoom-out;
 }
 #Projects .Project .Content .Screenshot.Active::after {
-  color: #84C1FF;
+  color: #FF7FBF;
   display: block;
   position: absolute;
   bottom: 0;

@@ -16,7 +16,7 @@
       <div class='Background'></div>
       <div class='Content'>
         <h1>Projects Index</h1>
-        <p>List of projects I have made over the years.</p>
+        <p>Showcase of my projects</p>
         <button onclick='goto("main", "about")'>About me</button>
         <button onclick='goto("main", "projects")'>My projects</button>
         <div id='Contact'>
@@ -42,7 +42,7 @@
     <section id='About'>
       <div class='Background'></div>
       <div class='Content'>
-        <button class='Back SquareButton' onclick='goto("main", "landing");'></button>
+        <button class='Back' onclick='goto("main", "landing");'>Back</button>
         <div class='Header'>
           <h2>About me</h2>
           <div class='BadgeProperty LargeText' title='Jakub Przybylski'></div>
@@ -63,34 +63,42 @@
         </div>
         <div class='TextSection'>
           <h4>Technologies</h4>
-          <div class='Entry Major'>
+          <div class='Entry'>
             <div class='Category'>Python 3</div>
-            <div class='Entry'>socket</div>
-            <div class='Entry'>tkinter</div>
-            <div class='Entry'>opencv</div>
           </div>
-          <div class='Entry Major'>
+          <div class='Entry'>socket</div>
+          <div class='Entry'>tkinter</div>
+          <div class='Entry'>opencv</div>
+          <br></br>
+          <div class='Entry'>
             <div class='Category'>Javascript (ES6)</div>
-            <div class='Entry'>Node.js</div>
-            <div class='Entry'>socket.io</div>
           </div>
-          <div class='Entry Major'>
-            <div class='Category'>HTML 5 + CSS 3</div>
-            <div class='Entry'>SCSS</div>
+          <div class='Entry'>Node.js</div>
+          <div class='Entry'>Express</div>
+          <div class='Entry'>Electron</div>
+          <div class='Entry'>socket.io</div>
+          <br></br>
+          <div class='Entry'>
+            <div class='Category'>HTML 5</div>
           </div>
+          <div class='Entry'>
+            <div class='Category'>CSS 3</div>
+          </div>
+          <div class='Entry'>Sass (SCSS syntax)</div>
+          <div class='Clear'></div>
         </div>
         <div class='TextSection'>
           <h4>Other Skills</h4>
           <div class='Entry'>RWD</div>
           <div class='Entry'>OOP</div>
+          <div class='Entry'>DevTools</div>
           <div class='Entry'>Git</div>
           <div class='Entry'>GitHub</div>
-          <div class='Entry'>Problem solving</div>
         </div>
         <div class='TextSection'>
           <h4>Spoken languages</h4>
           <div class='Entry'>Polish (Native)</div>
-          <div class='Entry'>English</div>
+          <div class='Entry'>English (B2)</div>
         </div>
         <div class='TextSection'>
           <h4>My coding history</h4>
@@ -114,12 +122,12 @@
             </a>
           </p>
           <p>External resources</p>
-          <div>
-            <a class='Entry' href='https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink' target='_blank'>Landing page background</a>
-            <a class='Entry' href='https://github.com/voodootikigod/logo.js' target='_blank'>Javascript logo</a>
-            <a class='Entry' href='https://www.python.org/community/logos/' target='_blank'>Python logo</a>
-            <a class='Entry' href='https://github.com/logos' target='_blank'>Github logo</a>
-            <a class='Entry' href='https://www.flaticon.com/authors/freepik' target='_blank'>Phone icon</a>
+          <div class='Links'>
+            <a class='Colored' href='https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink' target='_blank'>Landing page background</a>
+            <a class='Colored' href='https://github.com/voodootikigod/logo.js' target='_blank'>Javascript logo</a>
+            <a class='Colored' href='https://www.python.org/community/logos/' target='_blank'>Python logo</a>
+            <a class='Colored' href='https://github.com/logos' target='_blank'>Github logo</a>
+            <a class='Colored' href='https://www.flaticon.com/authors/freepik' target='_blank'>Phone icon</a>
           </div>
         </div>
       </div>
@@ -128,7 +136,7 @@
       <div id='Index' class='Project'>
         <div class='Background'></div>
         <div class='Content'>
-          <button class='Back SquareButton' onclick='goto("main", "landing");'></button>
+          <button class='Back' onclick='goto("main", "landing");'>Back</button>
           <h2>My projects</h2>
           <div class='TextSection Introduction'>This is a list of my personal projects that I find worth sharing or showcase some skillset in practice. See my Github profile for more.</div>
           <div id='IndexListing'></div>

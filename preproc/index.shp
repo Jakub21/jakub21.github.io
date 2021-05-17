@@ -18,7 +18,7 @@ $html {
       $div[.Background]
       $div[.Content] {
         $h1 {Projects Index}
-        $p {List of projects I have made over the years.}
+        $p {Showcase of my projects}
         $button[onclick 'goto("main", "about")'] {About me}
         $button[onclick 'goto("main", "projects")'] {My projects}
         $div[#Contact] {
@@ -48,7 +48,7 @@ $html {
     $section[#About] {
       $div[.Background]
       $div[.Content] {
-        $button[.Back .SquareButton onclick 'goto("main", "landing");']
+        $button[.Back onclick 'goto("main", "landing");'] {Back}
         $div[.Header] {
           $h2 {About me}
           $div[.BadgeProperty .LargeText title 'Jakub Przybylski']
@@ -69,35 +69,34 @@ $html {
         }
         $div[.TextSection] {
           $h4 {Technologies}
-          $div[.Entry .Major] {
-            $div[.Category] {Python 3}
-            $div[.Entry] {socket}
-            $div[.Entry] {tkinter}
-            $div[.Entry] {opencv}
-          }
-
-          $div[.Entry .Major] {
-            $div[.Category] {Javascript (ES6)}
-            $div[.Entry] {Node.js}
-            $div[.Entry] {socket.io}
-          }
-          $div[.Entry .Major] {
-            $div[.Category] {HTML 5 + CSS 3}
-            $div[.Entry] {SCSS}
-          }
+          $div[.Entry] { $div[.Category] {Python 3} }
+          $div[.Entry] {socket}
+          $div[.Entry] {tkinter}
+          $div[.Entry] {opencv}
+          $br
+          $div[.Entry] { $div[.Category] {Javascript (ES6)} }
+          $div[.Entry] {Node.js}
+          $div[.Entry] {Express}
+          $div[.Entry] {Electron}
+          $div[.Entry] {socket.io}
+          $br
+          $div[.Entry] { $div[.Category] {HTML 5} }
+          $div[.Entry] { $div[.Category] {CSS 3} }
+          $div[.Entry] {Sass (SCSS syntax)}
+          $div[.Clear]
         }
         $div[.TextSection] {
           $h4 {Other Skills}
           $div[.Entry] {RWD}
           $div[.Entry] {OOP}
+          $div[.Entry] {DevTools}
           $div[.Entry] {Git}
           $div[.Entry] {GitHub}
-          $div[.Entry] {Problem solving}
         }
         $div[.TextSection] {
           $h4 {Spoken languages}
           $div[.Entry] {Polish (Native)}
-          $div[.Entry] {English}
+          $div[.Entry] {English (B2)}
         }
         $div[.TextSection] {
           $h4 {My coding history}
@@ -129,12 +128,12 @@ $html {
             $span {Project repository}
           }}
           $p {External resources}
-          $div {
-            $a[.Entry href 'https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink' target _blank] {Landing page background}
-            $a[.Entry href 'https://github.com/voodootikigod/logo.js' target _blank] {Javascript logo}
-            $a[.Entry href 'https://www.python.org/community/logos/' target _blank] {Python logo}
-            $a[.Entry href 'https://github.com/logos' target _blank] {Github logo}
-            $a[.Entry href 'https://www.flaticon.com/authors/freepik' target _blank] {Phone icon}
+          $div[.Links] {
+            $a[.Colored href 'https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink' target _blank] {Landing page background}
+            $a[.Colored href 'https://github.com/voodootikigod/logo.js' target _blank] {Javascript logo}
+            $a[.Colored href 'https://www.python.org/community/logos/' target _blank] {Python logo}
+            $a[.Colored href 'https://github.com/logos' target _blank] {Github logo}
+            $a[.Colored href 'https://www.flaticon.com/authors/freepik' target _blank] {Phone icon}
           }
         }
       }
@@ -143,7 +142,7 @@ $html {
       $div[#Index .Project] {
       $div[.Background]
         $div[.Content] {
-          $button[.Back .SquareButton onclick 'goto("main", "landing");']
+          $button[.Back onclick 'goto("main", "landing");'] {Back}
           $h2 {My projects}
           $div[.TextSection .Introduction] {
             This is a list of my personal projects that I find worth sharing
