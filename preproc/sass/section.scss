@@ -54,7 +54,7 @@ section .Content {
     h4 {
       margin: 1em 0;
       font-size: 1.25em;
-      color: $FgSecondary;
+      color: $FgPrimary;
     }
     &::after {
       position: relative;
@@ -74,7 +74,6 @@ section .Content {
       display: inline-block;
       padding: .5em;
       background-color: #6666;
-      border-radius: .25em;
       opacity: .8;
       transition: opacity .3s ease;
       margin-bottom: .25em;
@@ -87,8 +86,7 @@ section .Content {
       }
       .Category {
         text-align: center;
-        color: $FgPrimary;
-        padding: 0 .5em 1em;
+        color: $FgSecondary;
       }
     }
   }
@@ -114,6 +112,12 @@ section .Content {
       &:hover {
         opacity: 1;
         border-color: #888;
+      }
+    }
+    a.Colored {
+      color: $FgLink;
+      &:hover {
+        color: $FgLinkHover;
       }
     }
   }

@@ -17,15 +17,19 @@ button.SquareButton, a.SquareButton {
 }
 
 .Back {
-  background-image: url('img/buttons/back.png');
   position: absolute;
   top: .5em; left: .5em;
+  padding: .5em 1em;
+  background-color: $BgButtonLanding;
+  &:hover {
+    background-color: $BgButtonLandingHover;
+  }
 }
 
 button {
-  background-color: $BgButton;
-  border-radius: .16em;
+  background: none;
   border: none;
+  border-bottom: 2px solid $BgButton;
   color: inherit;
   letter-spacing: inherit;
   font-size: inherit;
@@ -48,8 +52,8 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  font-family: 'Montserrat';
+  font-weight: 100;
+  // font-family: 'Montserrat';
 }
 h1 { font-size: 3.25em; }
 h2 { font-size: 2em; }
