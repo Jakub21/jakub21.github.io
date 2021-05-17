@@ -23,9 +23,7 @@
   }
   button {
     margin: 2em 1em;
-    background-color: $BgButtonLanding;
-    border-bottom: 2px solid $BgButtonLanding;
-    &:hover { background-color: $BgButtonLandingHover; }
+    border-bottom: 2px solid $BrdButton;
     @include breakpoint(lowres) {
       font-size: 1.1rem;
     }
@@ -33,15 +31,12 @@
       font-size: 1.1em;
     }
   }
-  &.SlideOut #Contact {
-    bottom: 2em;
-  }
   .Background {
     background-size: cover;
     background-position: center;
     background-blend-mode: color;
     background-image: url('img/coding.jpg');
-    filter: blur(.3em) saturate(.1) brightness(0.5);
+    filter: blur(.3em) saturate(.25) brightness(0.33);
     transition: opacity .4s ease-in;
   }
   #Contact {
@@ -77,5 +72,8 @@
         display: none;
       }
     }
+  }
+  &.SlideOut #Contact {
+    bottom: 2em;
   }
 }

@@ -19,21 +19,18 @@ button.SquareButton, a.SquareButton {
 .Back {
   position: absolute;
   top: .5em; left: .5em;
-  padding: .5em 1em;
-  background-color: $BgButtonLanding;
-  &:hover {
-    background-color: $BgButtonLandingHover;
-  }
+  border: none;
 }
 
 button {
   background: none;
+  background-color: $BgButton;
   border: none;
-  border-bottom: 2px solid $BgButton;
+  border-bottom: 2px solid $BrdButton;
   color: inherit;
   letter-spacing: inherit;
   font-size: inherit;
-  padding: .75em 1.5em;
+  padding: .5em 1.3em;
   transition: background .3s ease;
   &:hover {
     background-color: $BgButtonHover;
