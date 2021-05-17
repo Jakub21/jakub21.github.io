@@ -16,10 +16,12 @@ button.SquareButton:hover, a.SquareButton:hover {
 }
 
 .Back {
-  position: absolute;
+  position: fixed;
   top: 0.5em;
   left: 0.5em;
   border: none;
+  background-color: #442F59;
+  z-index: 10000;
 }
 
 button {
@@ -200,12 +202,8 @@ section .Content .TextSection .Entry {
   display: inline-block;
   padding: 0.5em;
   background-color: #6666;
-  opacity: 0.8;
   transition: opacity 0.3s ease;
   margin-bottom: 0.25em;
-}
-section .Content .TextSection .Entry:hover {
-  opacity: 1;
 }
 section .Content .TextSection .Entry.Major {
   background-color: #6666;

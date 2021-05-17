@@ -17,9 +17,11 @@ button.SquareButton, a.SquareButton {
 }
 
 .Back {
-  position: absolute;
+  position: fixed;
   top: .5em; left: .5em;
   border: none;
+  background-color: $BgButtonBack;
+  z-index: 10000;
 }
 
 button {
