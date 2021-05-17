@@ -16,10 +16,12 @@ button.SquareButton:hover, a.SquareButton:hover {
 }
 
 .Back {
-  position: absolute;
+  position: fixed;
   top: 0.5em;
   left: 0.5em;
   border: none;
+  background-color: #442F59;
+  z-index: 10000;
 }
 
 button {
