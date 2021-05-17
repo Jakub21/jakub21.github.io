@@ -74,10 +74,8 @@ section .Content {
       display: inline-block;
       padding: .5em;
       background-color: #6666;
-      opacity: .8;
       transition: opacity .3s ease;
       margin-bottom: .25em;
-      &:hover { opacity: 1; }
       &.Major {
         background-color: #6666;
         padding: 1em .5em;
