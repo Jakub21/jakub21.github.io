@@ -91,7 +91,7 @@ let buildHeader = (id, project, badgesShp) => {
   }
 
   let headerShp = `
-  $button[.Back onclick 'goto("main", "landing");'] {Back}
+  $button[.Back onclick 'goto("project", "index")'] {Back}
   $h2 {${project.name}}
   $div[.BadgeProperty title '${timelineShp}'] {
     $img[src img/date.png] }

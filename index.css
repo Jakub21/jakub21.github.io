@@ -9,35 +9,32 @@ button.SquareButton, a.SquareButton {
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #CCC3;
+  background-color: #6C4889AA;
 }
 button.SquareButton:hover, a.SquareButton:hover {
-  background-color: #CCC6;
+  background-color: #6C4889;
 }
 
 .Back {
   position: absolute;
   top: 0.5em;
   left: 0.5em;
-  padding: 0.5em 1em;
-  background-color: #6C4889AA;
-}
-.Back:hover {
-  background-color: #6C4889;
+  border: none;
 }
 
 button {
   background: none;
+  background-color: #6C4889AA;
   border: none;
-  border-bottom: 2px solid #CCC3;
+  border-bottom: 2px solid #6C4889;
   color: inherit;
   letter-spacing: inherit;
   font-size: inherit;
-  padding: 0.75em 1.5em;
+  padding: 0.5em 1.3em;
   transition: background 0.3s ease;
 }
 button:hover {
-  background-color: #CCC6;
+  background-color: #6C4889;
   cursor: pointer;
 }
 
@@ -283,11 +280,7 @@ section .Content .Links a.Colored:hover {
 }
 #Landing button {
   margin: 2em 1em;
-  background-color: #6C4889AA;
-  border-bottom: 2px solid #6C4889AA;
-}
-#Landing button:hover {
-  background-color: #6C4889;
+  border-bottom: 2px solid #6C4889;
 }
 @media only screen and (max-resolution: 149dpi) {
   #Landing button {
@@ -299,15 +292,12 @@ section .Content .Links a.Colored:hover {
     font-size: 1.1em;
   }
 }
-#Landing.SlideOut #Contact {
-  bottom: 2em;
-}
 #Landing .Background {
   background-size: cover;
   background-position: center;
   background-blend-mode: color;
   background-image: url("img/coding.jpg");
-  filter: blur(0.3em) saturate(0.1) brightness(0.5);
+  filter: blur(0.3em) saturate(0.25) brightness(0.33);
   transition: opacity 0.4s ease-in;
 }
 #Landing #Contact {
@@ -363,6 +353,9 @@ section .Content .Links a.Colored:hover {
   #Landing #Contact {
     display: none;
   }
+}
+#Landing.SlideOut #Contact {
+  bottom: 2em;
 }
 
 #About .Content .Header {
@@ -424,16 +417,12 @@ section .Content .Links a.Colored:hover {
   padding: 0 1em 0 0.5em;
   transition: max-height 0.75s ease;
   overflow: hidden;
-  border-right: 1px solid #CCC3;
+  border-right: 1px solid #6C4889AA;
 }
 #Projects #Index .Element .Description button {
   margin: 1em auto 0.2em;
   padding: 0.33em 1em;
   display: block;
-  background-color: #59002C55;
-}
-#Projects #Index .Element .Description button:hover {
-  background-color: #59002CAA;
 }
 #Projects #Index .Element.DetailsOn {
   opacity: 1;
