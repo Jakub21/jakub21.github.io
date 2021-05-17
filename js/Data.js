@@ -108,7 +108,7 @@ let getProjectsData = () => { return {
       start: '2020 Q4',
       latest: '+'
     },
-    desc: 'HTML Preprocessor for static pages. Javascript version allows dynamic creation of  DOM elements.',
+    desc: 'HTML Preprocessor for static pages. The Javascript version allows dynamic creation of  DOM elements.',
   },
   cis: {
     name: 'CIS Protocol',
