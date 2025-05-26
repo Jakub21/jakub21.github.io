@@ -1,2 +1,3 @@
-# SASS files
-*.css.map
+**/img/full
+**/img/old
+*.pdn

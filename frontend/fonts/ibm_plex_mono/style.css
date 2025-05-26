@@ -1,0 +1,56 @@
+
+/* Thin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(./IBMPlexMono-Thin.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+/* Extra Light */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(./IBMPlexMono-ExtraLight.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+
+/* Light */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(./IBMPlexMono-Light.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(./IBMPlexMono-Regular.ttf) format('truetype');
+  font-style: normal;    
+  font-weight: 400;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(./IBMPlexMono-Medium.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Semi Bold */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(./IBMPlexMono-SemiBold.ttf) format('truetype');
+  font-style: normal;    
+  font-weight: 600;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(./IBMPlexMono-Bold.ttf) format('truetype');
+  font-style: normal;    
+  font-weight: 700;
+}
